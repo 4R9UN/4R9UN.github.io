@@ -1,873 +1,684 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" data-template="bento" data-avatar="vector-blue">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arjun Trivedi (@4R9UN) | Executive AI Security, Agentic Architecture &amp; AI FDE Leader</title>
-  <meta name="description" content="Executive portfolio of Arjun Trivedi (@4R9UN) — Senior Security Research Leader at Microsoft (12+ yrs Cyber, 7+ yrs Microsoft, leading 15 global engineers). Creator of ASRS, Official MCP Registry servers (mcp-kql-server, fastmcp-threatintel), Project Perception &amp; Security Copilot (+35% accuracy) contributor." />
-  <meta property="og:title" content="Arjun Trivedi | Executive AI &amp; Security Research Leader · Agentic AI Architect · AI FDE Leader" />
-  <meta property="og:description" content="12+ Yrs Cybersecurity · 7+ Yrs Microsoft · Leading 15 Global Engineers · 1,000+ Enterprise Adoptions · +35% Security Copilot Accuracy · Official MCP Registry Author." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://4r9un.github.io/" />
-  <meta property="og:image" content="https://4r9un.github.io/assets/hero-command-center.svg" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060913' stroke='%2300f0ff' stroke-width='3'/%3E%3Cpath d='M32 10 L50 20 L50 36 C50 46 32 54 32 54 C32 54 14 46 14 36 L14 20 Z' fill='none' stroke='%2300f0ff' stroke-width='3.5'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%2310b981'/%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="./styles.css" />
+  <title>Arjun Trivedi (@4R9UN) — AI Security, Agentic Architecture &amp; AI FDE Leader</title>
+  <link rel="icon" type="image/png" href="assets/arjun-vector-blue.png" />
+  <meta name="description" content="Executive portfolio of Arjun Trivedi (@4R9UN) — Senior Security Research Leader at Microsoft. Agentic AI &amp; MCP Architect, AI Forward Deployed Engineering (FDE) Leader, and Detection Engineering Leader." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Interactive Cyber-Telemetry Particle Network Canvas -->
-  <canvas id="telemetry-canvas" aria-hidden="true"></canvas>
+  <!-- Subtle ambient background canvas -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
 
-  <!-- Ambient Glow Orbs -->
-  <div class="ambient-orb orb-cyan" aria-hidden="true"></div>
-  <div class="ambient-orb orb-violet" aria-hidden="true"></div>
-  <div class="ambient-orb orb-emerald" aria-hidden="true"></div>
+  <!-- =====================================================================
+       FLOATING STUDIO SWITCHER BAR (4 LIVE TEMPLATES + 3 LIVE AVATARS)
+       ===================================================================== -->
+  <header class="studio-bar" role="banner" aria-label="Live Portfolio Template and Avatar Switcher">
+    <div class="studio-bar-inner">
+      <div class="studio-group">
+        <span class="studio-label">TEMPLATE</span>
+        <div class="studio-pills" role="tablist" aria-label="Select Portfolio Layout Template">
+          <button type="button" class="tpl-btn active" role="tab" aria-selected="true" data-template-btn="bento">
+            <span class="tpl-num">01</span> Apple / Linear Bento
+          </button>
+          <button type="button" class="tpl-btn" role="tab" aria-selected="false" data-template-btn="editorial">
+            <span class="tpl-num">02</span> Split Editorial
+          </button>
+          <button type="button" class="tpl-btn" role="tab" aria-selected="false" data-template-btn="spotlight">
+            <span class="tpl-num">03</span> Executive Spotlight
+          </button>
+          <button type="button" class="tpl-btn" role="tab" aria-selected="false" data-template-btn="cyberos">
+            <span class="tpl-num">04</span> Cyber-OS Deck
+          </button>
+        </div>
+      </div>
 
-  <!-- Top Navigation & Executive Command Header -->
-  <header class="site-header" id="top">
-    <div class="container nav-container">
-      <a href="#top" class="brand-logo" aria-label="Arjun Trivedi Home">
-        <span class="brand-shield" aria-hidden="true">◆</span>
-        <span class="brand-name">ARJUN TRIVEDI</span>
-        <span class="brand-handle">// @4R9UN</span>
-      </a>
+      <div class="studio-divider" aria-hidden="true"></div>
 
-      <nav class="main-nav" aria-label="Primary Navigation">
-        <a href="#pillars">3 Pillars</a>
-        <a href="#pipeline">Agentic Pipeline</a>
-        <a href="#systems">Flagship Systems</a>
-        <a href="#timeline">Leadership Track</a>
-        <a href="#recognition">Recognition</a>
-        <a href="#hiring-brief">Hiring Brief</a>
-      </nav>
+      <div class="studio-group">
+        <span class="studio-label">PORTRAIT</span>
+        <div class="avatar-pills" role="group" aria-label="Select Arjun Portrait Style">
+          <button type="button" class="avatar-btn active" data-avatar-btn="vector-blue" data-src="assets/arjun-vector-blue.png" title="Vector Portrait (Blue Shirt)">
+            <img src="assets/arjun-vector-blue.png" alt="Vector Blue thumbnail" />
+            <span>Vector Blue</span>
+          </button>
+          <button type="button" class="avatar-btn" data-avatar-btn="vector-teal" data-src="assets/arjun-vector-teal.png" title="Vector Portrait (Teal Shirt)">
+            <img src="assets/arjun-vector-teal.png" alt="Vector Teal thumbnail" />
+            <span>Vector Teal</span>
+          </button>
+          <button type="button" class="avatar-btn" data-avatar-btn="real-photo" data-src="assets/arjun-avatar.jpg" title="Real Photograph">
+            <img src="assets/arjun-avatar.jpg" alt="Real Photo thumbnail" />
+            <span>Real Photo</span>
+          </button>
+        </div>
+      </div>
 
-      <div class="header-actions">
-        <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-emerald btn-sm">
-          <span class="pulse-dot"></span> ASRS Live Demo
-        </a>
-        <a href="./assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf" download class="btn btn-cyan btn-sm">
-          ↓ Executive CV
+      <div class="studio-actions">
+        <a href="assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf" download class="studio-cv-btn">
+          Download CV
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Sticky Recruiter & Hiring Manager Role-Lens Switcher Bar -->
-  <section class="lens-bar" aria-label="Executive Role-Lens Switcher">
-    <div class="container lens-bar-inner">
-      <div class="lens-label">
-        <span class="mono-tag">RECRUITER LENS //</span>
-        <span>Filter portfolio by target leadership mandate:</span>
-      </div>
-      <div class="lens-pills" role="tablist" aria-label="Target Leadership Mandates">
-        <button type="button" class="lens-pill active" role="tab" aria-selected="true" data-lens="all">
-          All Executive Capabilities
-        </button>
-        <button type="button" class="lens-pill" role="tab" aria-selected="false" data-lens="ai-security">
-          AI Security &amp; Agentic Architect
-        </button>
-        <button type="button" class="lens-pill" role="tab" aria-selected="false" data-lens="fde">
-          AI Forward Deployed Engineering (FDE) Leader
-        </button>
-        <button type="button" class="lens-pill" role="tab" aria-selected="false" data-lens="detection">
-          Director / Head of Detection &amp; Threat Research
-        </button>
-      </div>
-    </div>
-  </section>
+  <main id="portfolio-stage">
 
-  <main>
-    <!-- ==================== 1. HERO COMMAND CENTER ==================== -->
-    <section class="hero-section section" id="hero">
-      <div class="container">
-        <!-- Dynamic Lens Brief Banner -->
-        <div class="lens-spotlight-banner" id="lens-banner" aria-live="polite">
-          <span class="lens-badge" id="lens-badge-title">EXECUTIVE OVERVIEW // FULL SPECTRUM</span>
-          <p id="lens-badge-desc">
-            Viewing unified track record across <strong>Agentic AI &amp; MCP Systems</strong>, <strong>Forward-Deployed Enterprise Execution (50+ enterprises)</strong>, and <strong>Global Detection &amp; Threat Research Leadership (15-person org at Microsoft)</strong>.
-          </p>
-        </div>
+    <!-- ===================================================================
+         TEMPLATE 1: APPLE / LINEAR BENTO GRID (VIEWPORT-FIRST, MINIMAL TEXT)
+         =================================================================== -->
+    <section id="tpl-bento" class="template-view active" data-template-view="bento" aria-label="Apple Linear Bento Grid Portfolio">
+      <div class="bento-shell">
 
-        <div class="hero-grid">
-          <div class="hero-content">
-            <div class="status-pill">
-              <span class="status-indicator"></span>
-              <span>Senior Security Research Leader @ Microsoft · Open to Principal / Director / AI FDE Leadership</span>
+        <!-- CARD 1: HERO PROFILE -->
+        <article class="bento-card bento-hero">
+          <div class="bento-hero-top">
+            <div class="portrait-frame portrait-squircle">
+              <img src="assets/arjun-vector-blue.png" alt="Arjun Trivedi portrait" data-arjun-avatar />
+              <span class="status-dot" title="Available for Principal / Director / AI FDE Leadership"></span>
             </div>
-
-            <h1 class="hero-title">
-              Architecting <span class="text-gradient-cyan">Autonomous AI Defense</span> &amp; Leading Global <span class="text-gradient-violet">Security Research</span> at Planet Scale.
-            </h1>
-
-            <div class="typewriter-row" aria-live="polite">
-              <span class="mono-prefix">&gt; ACTIVE MANDATE:</span>
-              <span class="typewriter-text" id="typewriter-target">Agentic AI &amp; Official MCP Ecosystem Architect</span>
-              <span class="typewriter-cursor" aria-hidden="true">▋</span>
-            </div>
-
-            <p class="hero-lead">
-              <strong>Arjun Trivedi (<span class="mono-inline">@4R9UN</span>)</strong> brings <strong>12+ years</strong> of progressive cybersecurity expertise and <strong>7+ years at Microsoft</strong>, directly managing and technically leading a <strong>15-person global detection engineering &amp; AI security research team</strong>. Known for turning ambiguous nation-state, multi-cloud, and agentic AI challenges into shipped Microsoft capabilities (<em>Project Perception</em>, <em>Security Copilot</em>, <em>Sentinel Multi-Cloud Essentials</em>) and production open-source MCP platforms.
-            </p>
-
-            <div class="hero-cta-group">
-              <a href="./assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf" download class="btn btn-cyan btn-lg">
-                <span>📄 Download Executive CV (PDF)</span>
-              </a>
-              <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-emerald btn-lg">
-                <span>⚡ Launch ASRS Live Demo</span>
-              </a>
-              <a href="https://www.linkedin.com/in/imarjuntrivedi/" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-lg">
-                <span>💼 LinkedIn</span>
-              </a>
-              <a href="https://github.com/4R9UN" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-lg">
-                <span>🐙 GitHub (@4R9UN)</span>
-              </a>
-              <a href="https://registry.modelcontextprotocol.io/?q=4R9UN" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-lg">
-                <span>🧩 Official MCP Registry</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Executive Command Card -->
-          <aside class="hero-telemetry-card glass-panel" aria-label="Verified Executive Telemetry">
-            <div class="panel-header">
-              <span class="panel-dots"><i></i><i></i><i></i></span>
-              <span class="mono-tag">VERIFIED_EXECUTIVE_PROFILE.JSON</span>
-              <span class="badge-verified">✓ 100% AUDITABLE</span>
-            </div>
-            <div class="telemetry-body">
-              <div class="telemetry-kv">
-                <span class="kv-key">CURRENT ROLE</span>
-                <span class="kv-val">Senior Security Researcher · Microsoft</span>
+            <div class="bento-hero-copy">
+              <div class="eyebrow-pill">
+                <span class="pulse-dot"></span> Senior Security Research Leader @ Microsoft
               </div>
-              <div class="telemetry-kv">
-                <span class="kv-key">ORG SCOPE</span>
-                <span class="kv-val highlight-cyan">15 Direct Reports (Global Research &amp; Eng)</span>
-              </div>
-              <div class="telemetry-kv">
-                <span class="kv-key">FLAGSHIP AI SHIPMENTS</span>
-                <span class="kv-val">Project Perception · Security Copilot (+35%)</span>
-              </div>
-              <div class="telemetry-kv">
-                <span class="kv-key">MCP REGISTRY &amp; PYPI</span>
-                <span class="kv-val highlight-violet">mcp-kql-server (v2.1.5) · fastmcp-threatintel</span>
-              </div>
-              <div class="telemetry-kv">
-                <span class="kv-key">ENTERPRISE FOOTPRINT</span>
-                <span class="kv-val highlight-emerald">1,000+ Enterprises · 50+ FDE Escalations</span>
-              </div>
-              <div class="telemetry-kv">
-                <span class="kv-key">DEFENDER SCALE</span>
-                <span class="kv-val">100M+ Users Protected (150 Countries)</span>
-              </div>
-              <div class="telemetry-kv">
-                <span class="kv-key">RECOGNITION</span>
-                <span class="kv-val highlight-amber">🏆 Microsoft Global Hackathon Winner 2023</span>
-              </div>
-            </div>
-          </aside>
-        </div>
-
-        <!-- 7 Animated Executive Impact Counters -->
-        <div class="metrics-strip" aria-label="Verified Impact Metrics">
-          <article class="metric-card" data-tags="all ai-security fde detection">
-            <div class="metric-value">
-              <span class="counter" data-target="12">12</span><span class="metric-suffix">+ Yrs</span>
-            </div>
-            <div class="metric-label">Cybersecurity R&amp;D</div>
-            <div class="metric-sub">Microsoft · Wipro · Sophos</div>
-          </article>
-
-          <article class="metric-card" data-tags="all ai-security fde detection">
-            <div class="metric-value">
-              <span class="counter" data-target="7">7</span><span class="metric-suffix">+ Yrs</span>
-            </div>
-            <div class="metric-label">Microsoft Security</div>
-            <div class="metric-sub">Threat Experts → AI Security Lead</div>
-          </article>
-
-          <article class="metric-card" data-tags="all ai-security fde detection">
-            <div class="metric-value">
-              <span class="counter" data-target="15">15</span><span class="metric-suffix"> Eng</span>
-            </div>
-            <div class="metric-label">Global Team Led</div>
-            <div class="metric-sub">Direct People &amp; Tech Strategy</div>
-          </article>
-
-          <article class="metric-card" data-tags="all fde detection">
-            <div class="metric-value">
-              <span class="counter" data-target="1000">1,000</span><span class="metric-suffix">+</span>
-            </div>
-            <div class="metric-label">Enterprise Adoptions</div>
-            <div class="metric-sub">Sentinel Multi-Cloud Essentials</div>
-          </article>
-
-          <article class="metric-card" data-tags="all detection fde">
-            <div class="metric-value">
-              <span class="counter" data-target="200">200</span><span class="metric-suffix">+</span>
-            </div>
-            <div class="metric-label">KQL Detections Shipped</div>
-            <div class="metric-sub">Up to 50% Faster Enterprise MTTR</div>
-          </article>
-
-          <article class="metric-card" data-tags="all ai-security fde">
-            <div class="metric-value">
-              <span class="metric-prefix">+</span><span class="counter" data-target="35">35</span><span class="metric-suffix">%</span>
-            </div>
-            <div class="metric-label">Copilot Accuracy Lift</div>
-            <div class="metric-sub">RAG, Context &amp; Vector Grounding</div>
-          </article>
-
-          <article class="metric-card" data-tags="all fde">
-            <div class="metric-value">
-              <span class="counter" data-target="50">50</span><span class="metric-suffix">+ Orgs</span>
-            </div>
-            <div class="metric-label">FDE Enterprise Engagements</div>
-            <div class="metric-sub">+20% CSAT · Field-to-Product Loop</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 2. THREE SIGNATURE PILLARS (BENTO GRID) ==================== -->
-    <section class="section" id="pillars">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">// CATEGORY-OF-ONE EXECUTIVE POSITIONING</span>
-          <h2 class="section-title">Three Signature Market Pillars</h2>
-          <p class="section-subtitle">
-            Most leaders understand only one layer: either pure LLM/agent tooling, pure threat research, or customer delivery. Arjun integrates all three into a single executive operating model.
-          </p>
-        </div>
-
-        <div class="bento-grid">
-          <!-- Pillar 1 -->
-          <article class="bento-card glass-panel lens-target" data-tags="ai-security">
-            <div class="bento-top">
-              <span class="pillar-num">PILLAR 01 // AGENTIC AI &amp; AI SECURITY</span>
-              <span class="pillar-tag tag-cyan">AI Architect &amp; Red Team Lead</span>
-            </div>
-            <h3>Agentic AI &amp; AI Security Architecture</h3>
-            <p class="bento-summary">
-              Designing schema-grounded multi-agent investigation systems, production MCP servers, and adversarial red-team guardrails for autonomous SOC operations.
-            </p>
-            <ul class="bento-list">
-              <li><strong>Microsoft Project Perception:</strong> Contributed research and hunting agent capabilities applying organizational context, detection intelligence, and evidence-grade reasoning while preserving human oversight.</li>
-              <li><strong>Microsoft Security Copilot (+35% Accuracy):</strong> Integrated retrieval-augmented threat summarization and refined context, token, and vector handling for SOC analysts.</li>
-              <li><strong>AI Red Teaming &amp; Safety Gates:</strong> Lead hands-on assessments for prompt injection, jailbreaks, unsafe tool invocation, authorization boundary failures, indirect instruction attacks, and excessive agency.</li>
-              <li><strong>Official MCP Registry Pioneer:</strong> Built <code>mcp-kql-server</code> (PyPI v2.1.5), <code>fastmcp-threatintel</code> (PyPI v0.2.7, 40★), <code>ASRS</code> multi-SIEM platform, and <code>Assured-Arc</code> Copilot harness.</li>
-            </ul>
-            <div class="bento-chips">
-              <span>Multi-Agent Systems</span>
-              <span>Model Context Protocol (MCP)</span>
-              <span>RAG &amp; Vector Grounding</span>
-              <span>AI Red Teaming</span>
-              <span>NL2KQL</span>
-            </div>
-          </article>
-
-          <!-- Pillar 2 -->
-          <article class="bento-card glass-panel lens-target" data-tags="fde">
-            <div class="bento-top">
-              <span class="pillar-num">PILLAR 02 // FORWARD-DEPLOYED EXECUTION</span>
-              <span class="pillar-tag tag-violet">AI FDE &amp; Product Delivery Leader</span>
-            </div>
-            <h3>AI Forward Deployed Engineering (FDE) &amp; R&amp;D-to-Production</h3>
-            <p class="bento-summary">
-              Embedding directly with global enterprise CISOs and SOC teams to solve critical field escalations and convert raw customer pain into planet-scale product features.
-            </p>
-            <ul class="bento-list">
-              <li><strong>50+ Global Enterprise Engagements (+20% CSAT):</strong> Resolved high-severity SIEM, EDR/XDR, and AI security escalations, turning field evidence into reusable product analytics and engineering roadmap priorities.</li>
-              <li><strong>1,000+ Enterprise Adoptions:</strong> Co-created and shipped <em>Multi Cloud Attack Coverage Essentials</em> for Microsoft Sentinel across Azure, AWS, GCP, and Okta.</li>
-              <li><strong>Research-to-Production Transfer:</strong> Directed R&amp;D and PoC development for detection and threat research teams, defining production specifications for Sentinel, Defender XDR, and Security Copilot.</li>
-              <li><strong>Pioneer — Microsoft Threat Experts:</strong> Helped design and operationalize Microsoft's on-demand expert response service for active human-operated attacks.</li>
-            </ul>
-            <div class="bento-chips">
-              <span>Customer CISO Advisory</span>
-              <span>Field-to-Product Flywheel</span>
-              <span>Multi-Cloud Architecture</span>
-              <span>15-Person Org Leadership</span>
-            </div>
-          </article>
-
-          <!-- Pillar 3 -->
-          <article class="bento-card glass-panel lens-target" data-tags="detection">
-            <div class="bento-top">
-              <span class="pillar-num">PILLAR 03 // DETECTION &amp; APPLIED ML</span>
-              <span class="pillar-tag tag-emerald">Director / Head of Threat Research</span>
-            </div>
-            <h3>Detection Engineering, Threat Intelligence &amp; Applied ML at Scale</h3>
-            <p class="bento-summary">
-              Combining deep malware reverse engineering and nation-state campaign tracking with high-precision KQL detection engineering and machine learning telemetry models.
-            </p>
-            <ul class="bento-list">
-              <li><strong>200+ KQL Detections (-50% MTTR):</strong> Designed cross-domain detection and correlation rules across Sentinel &amp; XDR for identity threats, AiTM phishing, UEBA, cloud abuse, and advanced persistence.</li>
-              <li><strong>Applied ML Models (-30% False Positives):</strong> Developed and validated Random Forest, Logistic Regression, Gradient Boosting, Isolation Forest, and One-Class SVM models on security telemetry.</li>
-              <li><strong>20+ Python &amp; MSTICPy Automations (-60% Effort):</strong> Built reusable Jupyter hunting notebooks, enrichment pipelines, and YARA generators for blue-team operations.</li>
-              <li><strong>100M+ Users Protected (150 Countries):</strong> Deep foundation in PE/Android reverse engineering (IDA Pro, Ghidra) across Microsoft, Wipro, and Sophos.</li>
-            </ul>
-            <div class="bento-chips">
-              <span>200+ KQL Rules</span>
-              <span>Isolation Forest &amp; GBDT</span>
-              <span>MSTICPy &amp; Jupyter</span>
-              <span>MITRE ATT&amp;CK</span>
-              <span>IDA Pro &amp; Ghidra</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- FDE Flywheel Visual Blueprint -->
-        <div class="fde-blueprint-box glass-panel lens-target" data-tags="fde ai-security">
-          <div class="blueprint-header">
-            <div>
-              <span class="mono-tag">ARCHITECTURAL FLYWHEEL // FIELD-TO-PRODUCT VELOCITY</span>
-              <h3>The AI Forward Deployed Engineering (FDE) Execution Loop</h3>
-            </div>
-            <span class="badge-verified">50+ Enterprises → 1,000+ Production Deployments</span>
-          </div>
-          <div class="svg-wrapper">
-            <img src="./assets/fde-execution-loop.svg" alt="AI Forward Deployed Engineering Flywheel Diagram" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 3. INTERACTIVE AGENTIC SECURITY PIPELINE ==================== -->
-    <section class="section" id="pipeline">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">// INTERACTIVE ARCHITECTURE INSPECTOR (INSPIRED BY /APPLY WORKFLOW)</span>
-          <h2 class="section-title">Autonomous Agentic Security &amp; MCP Grounding Pipeline</h2>
-          <p class="section-subtitle">
-            Click any stage node below to inspect the production architecture, MCP schema-grounding protocol, AI red-team safety gates, and verified enterprise metrics.
-          </p>
-        </div>
-
-        <!-- Interactive 4-Stage Pipeline Selector -->
-        <div class="pipeline-interactive-grid" role="tablist" aria-label="Agentic Security Pipeline Stages">
-          <button type="button" class="pipeline-stage-btn active" role="tab" aria-selected="true" data-stage="stage1">
-            <div class="stage-step-row">
-              <span class="stage-num">STAGE 01</span>
-              <span class="stage-arrow" aria-hidden="true">→</span>
-            </div>
-            <h4>Telemetry &amp; CTI Ingestion</h4>
-            <p>Sentinel · Defender XDR · Splunk · AWS/GCP/Okta · VirusTotal/OTX</p>
-            <span class="stage-metric-pill">200+ KQL Rules · Multi-Cloud</span>
-          </button>
-
-          <button type="button" class="pipeline-stage-btn" role="tab" aria-selected="false" data-stage="stage2">
-            <div class="stage-step-row">
-              <span class="stage-num">STAGE 02</span>
-              <span class="stage-arrow" aria-hidden="true">→</span>
-            </div>
-            <h4>MCP Context &amp; Grounding</h4>
-            <p>mcp-kql-server (NL2KQL) · fastmcp-threatintel · Copilot RAG</p>
-            <span class="stage-metric-pill">+35% Copilot Accuracy Lift</span>
-          </button>
-
-          <button type="button" class="pipeline-stage-btn" role="tab" aria-selected="false" data-stage="stage3">
-            <div class="stage-step-row">
-              <span class="stage-num">STAGE 03</span>
-              <span class="stage-arrow" aria-hidden="true">→</span>
-            </div>
-            <h4>Multi-Agent Reasoning &amp; AI Red Team</h4>
-            <p>ASRS Triage/Analysis · Project Perception · Assured-Arc Gate</p>
-            <span class="stage-metric-pill">Prompt-Injection &amp; AuthZ Guardrails</span>
-          </button>
-
-          <button type="button" class="pipeline-stage-btn" role="tab" aria-selected="false" data-stage="stage4">
-            <div class="stage-step-row">
-              <span class="stage-num">STAGE 04</span>
-              <span class="stage-arrow" aria-hidden="true">✓</span>
-            </div>
-            <h4>Enterprise Production Impact</h4>
-            <p>Deployable Detections · Automated Verdicts · Field Productization</p>
-            <span class="stage-metric-pill">-50% MTTR · -30% False Positives</span>
-          </button>
-        </div>
-
-        <!-- Dynamic Inspector Console -->
-        <div class="pipeline-inspector glass-panel" id="pipeline-inspector" aria-live="polite">
-          <div class="inspector-left">
-            <div class="inspector-badge" id="insp-stage-tag">STAGE 01 // TELEMETRY &amp; CTI INGESTION MESH</div>
-            <h3 id="insp-title">Multi-SIEM, XDR &amp; Cross-Cloud Signal Normalization</h3>
-            <p id="insp-desc">
-              Ingests high-velocity identity, endpoint, and cloud control-plane telemetry across Microsoft Sentinel, Defender XDR, Splunk, Elastic Security, CrowdStrike Falcon, AWS CloudTrail, GCP Audit Logs, and Okta System Logs—paired with external CTI feeds.
-            </p>
-            <div class="inspector-metrics" id="insp-metrics">
-              <div class="insp-stat">
-                <strong>200+</strong>
-                <span>Production KQL Detections</span>
-              </div>
-              <div class="insp-stat">
-                <strong>6 Clouds</strong>
-                <span>Azure · AWS · GCP · Okta · IBM · Oracle</span>
-              </div>
-              <div class="insp-stat">
-                <strong>1,000+</strong>
-                <span>Enterprises Running Multi-Cloud Essentials</span>
-              </div>
-            </div>
-          </div>
-          <div class="inspector-right">
-            <div class="code-terminal">
-              <div class="terminal-bar">
-                <span class="panel-dots"><i></i><i></i><i></i></span>
-                <span class="mono-tag" id="insp-code-label">telemetry-ingestion-spec.kql</span>
-              </div>
-              <pre><code id="insp-code">// Multi-Cloud Identity &amp; AiTM Phishing Correlation (Microsoft Sentinel / XDR)
-union SigninLogs, AWSCloudTrail, GCPAuditLogs, Okta_CL
-| where TimeGenerated &gt; ago(24h)
-| evaluate bag_unpack(AdditionalDetails)
-| where RiskLevelDuringSignIn in ("high", "medium") or SessionTokenAnomaly == true
-| join kind=inner (ThreatIntelligenceIndicator | where Active == true) on $left.IPAddress == $right.NetworkIP
-| project TimeGenerated, UserPrincipalName, IPAddress, CloudPlatform, MITRETechnique="T1557.001"</code></pre>
-            </div>
-          </div>
-        </div>
-
-        <!-- Full SVG Workflow Diagram -->
-        <div class="svg-showcase glass-panel">
-          <div class="blueprint-header">
-            <span class="mono-tag">SYSTEM ARCHITECTURE DIAGRAM // NATIVE DARK-MODE SVG</span>
-            <a href="./assets/agentic-security-workflow.svg" target="_blank" rel="noopener noreferrer" class="text-link">Open Full-Resolution SVG ↗</a>
-          </div>
-          <div class="svg-wrapper">
-            <img src="./assets/agentic-security-workflow.svg" alt="Agentic Security Architecture Diagram" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 4. FLAGSHIP PRODUCTION SYSTEMS SHOWCASE ==================== -->
-    <section class="section" id="systems">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">// PRODUCTION OPEN-SOURCE &amp; ENTERPRISE SHIPMENTS</span>
-          <h2 class="section-title">Flagship Production Systems Arsenal</h2>
-          <p class="section-subtitle">
-            Every system below is backed by live deployments, PyPI packages, Official MCP Registry verification, or enterprise adoption across 1,000+ organizations.
-          </p>
-        </div>
-
-        <!-- Category Filter Bar -->
-        <div class="filter-row" role="group" aria-label="Filter Flagship Systems">
-          <button type="button" class="filter-btn active" data-filter="all">All Flagship Systems (6)</button>
-          <button type="button" class="filter-btn" data-filter="mcp-agentic">Agentic AI &amp; MCP Servers</button>
-          <button type="button" class="filter-btn" data-filter="cloud-fde">Enterprise Cloud &amp; FDE</button>
-          <button type="button" class="filter-btn" data-filter="safety-harness">AI Safety &amp; Agent Harnesses</button>
-        </div>
-
-        <div class="systems-grid" id="systems-grid">
-          <!-- System 1: ASRS -->
-          <article class="system-card glass-panel lens-target" data-category="mcp-agentic" data-tags="ai-security fde detection">
-            <div class="system-card-top">
-              <span class="sys-badge badge-live">🔴 LIVE MULTI-SIEM DEMO</span>
-              <span class="sys-lang">TypeScript · Multi-Agent · MCP</span>
-            </div>
-            <h3>ASRS: Autonomous Security Reasoning System</h3>
-            <p>
-              Unified multi-SIEM autonomous investigation platform spanning <strong>Microsoft Sentinel, Splunk, Elastic Security, and CrowdStrike Falcon</strong>. Orchestrates specialized <strong>Triage</strong>, <strong>Deep Analysis</strong>, and <strong>Verdict</strong> agents to correlate alerts, entities, evidence timelines, confidence scores, and MITRE ATT&amp;CK mappings.
-            </p>
-            <div class="sys-metrics-row">
-              <span>4 Enterprise SIEM/XDRs</span>
-              <span>3 Specialized Agent Roles</span>
-              <span>Evidence-Backed Verdicts</span>
-            </div>
-            <div class="system-card-actions">
-              <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-emerald btn-sm">⚡ Launch Live Demo</a>
-              <a href="https://github.com/4R9UN/ASRS-demo" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">GitHub Repo ↗</a>
-              <button type="button" class="btn btn-outline-cyan btn-sm js-open-modal" data-project="asrs">Architecture Spec</button>
-            </div>
-          </article>
-
-          <!-- System 2: MCP KQL Server -->
-          <article class="system-card glass-panel lens-target" data-category="mcp-agentic" data-tags="ai-security detection fde">
-            <div class="system-card-top">
-              <span class="sys-badge badge-violet">OFFICIAL MCP REGISTRY · PYPI v2.1.5</span>
-              <span class="sys-lang">Python · Kusto · Azure Container Apps</span>
-            </div>
-            <h3>MCP KQL Server (<code>mcp-kql-server</code>)</h3>
-            <p>
-              Production-oriented MCP server for <strong>schema-grounded NL2KQL</strong>, strict query validation and automatic repair, semantic schema memory, secure Kusto execution, visual analysis, and enterprise deployment on <strong>Azure Container Apps</strong> with Managed Identity and Bicep IaC.
-            </p>
-            <div class="sys-metrics-row">
-              <span>PyPI v2.1.5</span>
-              <span>MseeP Verified</span>
-              <span>1,900+ Newsletter Readers</span>
-            </div>
-            <div class="system-card-actions">
-              <a href="https://pypi.org/project/mcp-kql-server/" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm">📦 PyPI Package</a>
-              <a href="https://github.com/4R9UN/mcp-kql-server" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">GitHub Repo ↗</a>
-              <button type="button" class="btn btn-outline-cyan btn-sm js-open-modal" data-project="mcp-kql">Architecture Spec</button>
-            </div>
-          </article>
-
-          <!-- System 3: FastMCP ThreatIntel -->
-          <article class="system-card glass-panel lens-target" data-category="mcp-agentic" data-tags="ai-security detection">
-            <div class="system-card-top">
-              <span class="sys-badge badge-cyan">MSEEP VERIFIED · PYPI v0.2.7</span>
-              <span class="sys-lang">Python · FastMCP · STIX 2.1 · D3.js</span>
-            </div>
-            <h3>FastMCP ThreatIntel (<code>fastmcp-threatintel</code>)</h3>
-            <p>
-              AI-ready threat intelligence MCP server integrating <strong>VirusTotal, AlienVault OTX, AbuseIPDB, and IPinfo</strong> with confidence-scored attribution, automated MITRE ATT&amp;CK mapping, IOC relationship graphs, interactive D3.js visualization, and standardized STIX output.
-            </p>
-            <div class="sys-metrics-row">
-              <span>40 GitHub Stars · 14 Forks</span>
-              <span>4 CTI Providers Unified</span>
-              <span>STIX + ATT&amp;CK Output</span>
-            </div>
-            <div class="system-card-actions">
-              <a href="https://pypi.org/project/fastmcp-threatintel/" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm">📦 PyPI Package</a>
-              <a href="https://github.com/4R9UN/fastmcp-threatintel" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">GitHub Repo ↗</a>
-              <button type="button" class="btn btn-outline-cyan btn-sm js-open-modal" data-project="threatintel">Architecture Spec</button>
-            </div>
-          </article>
-
-          <!-- System 4: Assured-Arc -->
-          <article class="system-card glass-panel lens-target" data-category="safety-harness" data-tags="ai-security fde">
-            <div class="system-card-top">
-              <span class="sys-badge badge-amber">MULTI-AGENT COPILOT HARNESS</span>
-              <span class="sys-lang">Agent Orchestration · MCP Safety</span>
-            </div>
-            <h3>Assured-Arc: Bounded-Loop Multi-Agent Workbench</h3>
-            <p>
-              Portable GitHub Copilot multi-agent engineering harness featuring deterministic JSONL skill routing, context-isolated disposable subagents, strict one-writer concurrency guardrails, least-privilege MCP safety policies, and automated verification checkpoints.
-            </p>
-            <div class="sys-metrics-row">
-              <span>Bounded Agent Loops</span>
-              <span>Prompt-Injection Isolation</span>
-              <span>Automated Verifiers</span>
-            </div>
-            <div class="system-card-actions">
-              <a href="https://github.com/4R9UN/Assured-Arc" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm">🛡️ Explore Repo</a>
-              <button type="button" class="btn btn-outline-cyan btn-sm js-open-modal" data-project="assured-arc">Architecture Spec</button>
-            </div>
-          </article>
-
-          <!-- System 5: Multi-Cloud Attack Coverage Essentials -->
-          <article class="system-card glass-panel lens-target" data-category="cloud-fde" data-tags="fde detection">
-            <div class="system-card-top">
-              <span class="sys-badge badge-live">1,000+ ENTERPRISE ADOPTIONS</span>
-              <span class="sys-lang">Microsoft Sentinel · Azure · AWS · GCP · Okta</span>
-            </div>
-            <h3>Multi Cloud Attack Coverage Essentials &amp; Notebooks</h3>
-            <p>
-              Co-created and shipped Microsoft Sentinel's official cross-cloud threat detection and investigation solution, translating nation-state and multi-cloud research across Azure, AWS, GCP, and Okta into deployable enterprise analytics and Jupyter hunting notebooks.
-            </p>
-            <div class="sys-metrics-row">
-              <span>1,000+ Enterprise Deployments</span>
-              <span>-50% Incident MTTR</span>
-              <span>20+ MSTICPy / Jupyter Assets</span>
-            </div>
-            <div class="system-card-actions">
-              <a href="https://github.com/4R9UN/Multi-Cloud-Notebooks" target="_blank" rel="noopener noreferrer" class="btn btn-emerald btn-sm">☁️ Hunting Notebooks</a>
-              <button type="button" class="btn btn-outline-cyan btn-sm js-open-modal" data-project="multicloud">Architecture Spec</button>
-            </div>
-          </article>
-
-          <!-- System 6: PromptBook -->
-          <article class="system-card glass-panel lens-target" data-category="safety-harness" data-tags="ai-security">
-            <div class="system-card-top">
-              <span class="sys-badge badge-violet">PRIVACY-FIRST AI WORKSPACE</span>
-              <span class="sys-lang">TypeScript · Prompt Engineering · Red Teaming</span>
-            </div>
-            <h3>PromptBook: Security Prompt &amp; Evaluation Workspace</h3>
-            <p>
-              Privacy-first prompt-engineering workbench built for security researchers and AI red teams to version, test, and evaluate structured agent prompts, adversarial jailbreak scenarios, and repeatable SOC investigation workflows.
-            </p>
-            <div class="sys-metrics-row">
-              <span>Zero-Telemetry Privacy</span>
-              <span>Red-Team Scenario Library</span>
-              <span>Repeatable SOC Prompts</span>
-            </div>
-            <div class="system-card-actions">
-              <a href="https://github.com/4R9UN/Prompt-Book" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">📓 GitHub Repo ↗</a>
-              <button type="button" class="btn btn-outline-cyan btn-sm js-open-modal" data-project="promptbook">Architecture Spec</button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 5. EXECUTIVE CAREER TIMELINE ==================== -->
-    <section class="section" id="timeline">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">// 12+ YEARS PROGRESSIVE LEADERSHIP TRACK RECORD</span>
-          <h2 class="section-title">Executive Career Trajectory (Microsoft → Wipro → Sophos)</h2>
-          <p class="section-subtitle">
-            Use the Recruiter Role-Lens bar at the top of the page to highlight specific accomplishments for AI Security, Forward Deployed Engineering, or Detection Leadership.
-          </p>
-        </div>
-
-        <div class="timeline-container">
-          <!-- Role 1: Microsoft Senior Security Researcher -->
-          <article class="timeline-item glass-panel">
-            <div class="timeline-meta">
-              <span class="timeline-date">AUG 2020 — PRESENT</span>
-              <span class="timeline-company">Microsoft</span>
-              <span class="timeline-loc">Hyderabad, India · Global Scope</span>
-            </div>
-            <div class="timeline-body">
-              <div class="timeline-header-row">
-                <h3>Senior Security Researcher — Detection Engineering &amp; AI Security</h3>
-                <span class="role-scope-badge">Direct People &amp; Technical Leader (15-Person Global Team)</span>
-              </div>
-              <ul class="timeline-bullets">
-                <li class="lens-bullet" data-tags="ai-security fde detection">
-                  <strong>Global People &amp; Technical Leadership:</strong> Directly manage and technically lead a <strong>15-person global detection engineering and security research team</strong>; own strategy, hiring, performance management, mentoring, prioritization, and cross-functional delivery across product engineering, data science, operations, and enterprise customers.
-                </li>
-                <li class="lens-bullet" data-tags="ai-security">
-                  <strong>Microsoft Project Perception:</strong> Contributed to the creation of research and hunting agent capabilities for <em>Project Perception</em>, applying organizational context, detection knowledge, and evidence-grade reasoning to agentic defense workflows while preserving human strategy and oversight.
-                </li>
-                <li class="lens-bullet" data-tags="ai-security">
-                  <strong>Microsoft Security Copilot (+35% Accuracy):</strong> Integrated retrieval-augmented threat summarization and refined context, token, and vector handling for Microsoft Security Copilot, improving reported summarization accuracy by <strong>35%</strong> for SOC analysts.
-                </li>
-                <li class="lens-bullet" data-tags="ai-security">
-                  <strong>AI Security &amp; Red Teaming Lead:</strong> Lead hands-on assessments for prompt injection, jailbreaks, unsafe tool invocation, authorization boundary failures, indirect instruction attacks, and excessive agency; translate findings into guardrails, evaluation scenarios, approval gates, and safer agent behavior.
-                </li>
-                <li class="lens-bullet" data-tags="fde">
-                  <strong>AI Forward Deployed Enterprise Leadership (50+ Enterprises, +20% CSAT):</strong> Partnered with <strong>50+ global enterprises</strong> to resolve complex SIEM and EDR escalations, identify recurring product gaps, and convert customer evidence into reusable analytics and engineering priorities, improving reported CSAT by <strong>20%</strong>.
-                </li>
-                <li class="lens-bullet" data-tags="fde detection">
-                  <strong>Productized Cloud Research (1,000+ Enterprises):</strong> Co-created and shipped <em>Multi Cloud Attack Coverage Essentials</em> for Microsoft Sentinel, translating cross-cloud threat research (Azure, AWS, GCP, Okta, IBM, Oracle) into deployable analytics adopted by <strong>1,000+ enterprises</strong>.
-                </li>
-                <li class="lens-bullet" data-tags="detection">
-                  <strong>Detection Engineering at Scale (200+ KQL Rules, -50% MTTR):</strong> Designed <strong>200+ KQL detection and correlation rules</strong> across Microsoft Sentinel and Defender XDR, reducing incident response time by up to <strong>50%</strong> for identity threats, AiTM phishing, UEBA, cloud abuse, and persistence.
-                </li>
-                <li class="lens-bullet" data-tags="detection ai-security">
-                  <strong>Applied ML &amp; Data Science (-30% False Positives):</strong> Developed and validated Random Forest, Logistic Regression, Gradient Boosting, Isolation Forest, and One-Class SVM models on security telemetry; partnered with data scientists to reduce false positives by <strong>30%</strong>.
-                </li>
-                <li class="lens-bullet" data-tags="detection fde">
-                  <strong>Security Automation &amp; MSTICPy (-60% Research Effort):</strong> Built <strong>20+ Python and Jupyter automation assets</strong>, including MSTICPy contributions, for hunting, enrichment, and YARA generation, cutting repetitive threat research effort by up to <strong>60%</strong>.
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Role 2: Microsoft Threat Experts -->
-          <article class="timeline-item glass-panel">
-            <div class="timeline-meta">
-              <span class="timeline-date">MAR 2019 — AUG 2020</span>
-              <span class="timeline-company">Microsoft</span>
-              <span class="timeline-loc">Microsoft Threat Experts · India</span>
-            </div>
-            <div class="timeline-body">
-              <div class="timeline-header-row">
-                <h3>Cyber Threat Hunter — Microsoft Threat Experts (Pioneer Team)</h3>
-                <span class="role-scope-badge">Tier-1 Hunting SME &amp; Service Pioneer</span>
-              </div>
-              <ul class="timeline-bullets">
-                <li class="lens-bullet" data-tags="fde detection">
-                  <strong>Pioneer Member — Microsoft Threat Experts:</strong> Helped design and operationalize Microsoft's on-demand expert response service for active human-operated attacks against enterprise customers.
-                </li>
-                <li class="lens-bullet" data-tags="detection fde">
-                  <strong>Tier-1 Hunting Leadership:</strong> Led the Tier-1 hunting team as subject matter expert, establishing investigation standards, coaching analysts, and improving threat-advisory turnaround via Jupyter hunting notebooks and cloud automation.
-                </li>
-                <li class="lens-bullet" data-tags="detection ai-security">
-                  <strong>Automated Anomaly &amp; ML Pipelines:</strong> Built automated detection systems for novel malicious behaviors across Windows, mobile, and cross-platform telemetry using ML and structured human-review pipelines; designed scalable reverse engineering quality controls for large contractor teams.
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Role 3: Wipro -->
-          <article class="timeline-item glass-panel">
-            <div class="timeline-meta">
-              <span class="timeline-date">JUN 2017 — FEB 2019</span>
-              <span class="timeline-company">Wipro</span>
-              <span class="timeline-loc">India</span>
-            </div>
-            <div class="timeline-body">
-              <div class="timeline-header-row">
-                <h3>Malware Analyst &amp; Functional Technical Lead</h3>
-                <span class="role-scope-badge">Android, Native &amp; PE Reverse Engineering</span>
-              </div>
-              <ul class="timeline-bullets">
-                <li class="lens-bullet" data-tags="detection">
-                  <strong>Deep Reverse Engineering (IDA Pro &amp; Ghidra):</strong> Reverse engineered Android applications, native libraries, and PE/non-PE binaries to detect and mitigate harmful applications at ecosystem scale.
-                </li>
-                <li class="lens-bullet" data-tags="fde detection">
-                  <strong>Functional Leadership &amp; Cross-Team Advisory:</strong> Mentored analysts, prioritized investigations, architected repeatable malware labs, and collaborated with engineering, policy, and legal teams on product vulnerabilities.
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Role 4: Sophos -->
-          <article class="timeline-item glass-panel">
-            <div class="timeline-meta">
-              <span class="timeline-date">SEP 2014 — MAY 2017</span>
-              <span class="timeline-company">Sophos</span>
-              <span class="timeline-loc">India · Global Endpoint Products</span>
-            </div>
-            <div class="timeline-body">
-              <div class="timeline-header-row">
-                <h3>Threat Researcher — Malware &amp; Behavioral Detection</h3>
-                <span class="role-scope-badge">100M+ Users Protected Across 150 Countries</span>
-              </div>
-              <ul class="timeline-bullets">
-                <li class="lens-bullet" data-tags="detection">
-                  <strong>Global Endpoint Defense (100M+ Users):</strong> Analyzed bots, worms, trojans, packed executables, and malicious documents via static/dynamic reverse engineering, unpacking, debugging, and network analysis for products protecting <strong>100M+ users across 150 countries</strong>.
-                </li>
-                <li class="lens-bullet" data-tags="detection">
-                  <strong>Behavioral Detection Architecture:</strong> Engineered high-confidence static and dynamic behavioral patterns across file, registry, process, and network activity; also contributed Python exploit PoC and malware-lab tooling for a confidential government defense engagement.
-                </li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 6. RECOGNITION, MEDIA & THOUGHT LEADERSHIP ==================== -->
-    <section class="section" id="recognition">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">// INDUSTRY RECOGNITION, SPEAKING &amp; PUBLICATIONS</span>
-          <h2 class="section-title">Awards, Media &amp; Community Leadership</h2>
-        </div>
-
-        <div class="recognition-grid">
-          <article class="rec-card glass-panel">
-            <div class="rec-icon">🏆</div>
-            <span class="mono-tag">MICROSOFT GLOBAL HACKATHON</span>
-            <h3>2023 Global Winner &amp; Hackathon Judge</h3>
-            <p>
-              Won the <strong>Microsoft Global Hackathon 2023</strong> for creating the <em>MSTICPy AI Assistant</em>; subsequently invited to serve as a <strong>Hackathon Judge</strong> and active innovator in the <strong>Microsoft Security Hackathon 2025</strong>.
-            </p>
-          </article>
-
-          <article class="rec-card glass-panel">
-            <div class="rec-icon">🎙️</div>
-            <span class="mono-tag">FEATURED PODCAST GUEST</span>
-            <h3>AZ Security Podcast — Episode 27</h3>
-            <p>
-              Featured speaker discussing <strong>MCP KQL Server</strong>, schema-grounded NL2KQL, advanced threat hunting, and autonomous AI-enabled SOC investigation workflows.
-            </p>
-            <a href="https://www.youtube.com/watch?v=c8g4b7_1vXo" target="_blank" rel="noopener noreferrer" class="text-link">Watch Episode 27 ↗</a>
-          </article>
-
-          <article class="rec-card glass-panel">
-            <div class="rec-icon">📰</div>
-            <span class="mono-tag">1,900+ SUBSCRIBERS · 15+ ARTICLES</span>
-            <h3>MCP KQL Newsletter &amp; Tech Community Author</h3>
-            <p>
-              Author of the <strong>MCP KQL Server Newsletter (1,900+ subscribers)</strong> and <strong>15+ deep-dive publications</strong> across Microsoft Tech Community and Substack covering practical risks in cybersecurity agents and multi-cloud defense.
-            </p>
-            <a href="https://arjuntrivedi.substack.com" target="_blank" rel="noopener noreferrer" class="text-link">Read Newsletter on Substack ↗</a>
-          </article>
-
-          <article class="rec-card glass-panel">
-            <div class="rec-icon">🎓</div>
-            <span class="mono-tag">EXECUTIVE MENTORSHIP &amp; CREDENTIALS</span>
-            <h3>50+ Security Engineers Mentored · SANS FOR578</h3>
-            <p>
-              Mentored <strong>50+ cybersecurity researchers and engineers</strong> globally. Trained in <strong>SANS FOR578 (Cyber Threat Intelligence)</strong> and <strong>Microsoft SkillUp AI</strong>, holding an <strong>M.Sc. in Information Technology</strong>.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 7. EXECUTIVE CONTACT & HIRING BRIEF ==================== -->
-    <section class="section" id="hiring-brief">
-      <div class="container">
-        <div class="hiring-brief-card glass-panel">
-          <div class="hiring-brief-grid">
-            <div class="hiring-left">
-              <span class="section-eyebrow">// EXECUTIVE HIRING BRIEF &amp; DIRECT CONTACT</span>
-              <h2>Ready to Lead High-Impact AI Security, Detection &amp; FDE Organizations</h2>
-              <p>
-                Available for confidential conversations with Founders, CTOs, CISOs, and Executive Search Partners regarding high-impact Principal, Director, and Head-of-Function mandates in India (Hyderabad / Bengaluru / Remote) and Global Remote hubs.
+              <h1 class="bento-name">Arjun Trivedi <span class="handle">@4R9UN</span></h1>
+              <p class="bento-one-liner">
+                AI Security, Threat Research &amp; Forward Deployed AI Leader @ Microsoft
               </p>
+              <div class="pill-row">
+                <span class="mini-pill cyan">Agentic AI &amp; MCP Architect</span>
+                <span class="mini-pill emerald">AI Forward Deployed Eng (FDE)</span>
+                <span class="mini-pill violet">Detection &amp; Applied ML Leader</span>
+              </div>
+            </div>
+          </div>
+          <div class="bento-cta-bar">
+            <a href="assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf" download class="btn-solid">
+              Download Executive CV
+            </a>
+            <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener" class="btn-glass">
+              Live ASRS Demo ↗
+            </a>
+            <a href="https://www.linkedin.com/in/imarjuntrivedi/" target="_blank" rel="noopener" class="btn-glass">
+              LinkedIn ↗
+            </a>
+            <a href="https://github.com/4R9UN" target="_blank" rel="noopener" class="btn-glass">
+              GitHub ↗
+            </a>
+          </div>
+        </article>
 
-              <div class="target-roles-box">
-                <h4>Target Executive &amp; Principal Mandates</h4>
-                <div class="role-pills">
-                  <span>Principal / Director of AI Security</span>
-                  <span>Head of Detection Engineering &amp; Threat Research</span>
-                  <span>AI Forward Deployed Engineering (FDE) Leader</span>
-                  <span>Principal Agentic AI &amp; MCP Security Architect</span>
-                  <span>Director of Autonomous SOC &amp; Threat Intelligence</span>
+        <!-- CARD 2: GIANT IMPACT NUMBERS -->
+        <article class="bento-card bento-metrics">
+          <div class="card-kicker">VERIFIED EXECUTIVE SCALE</div>
+          <div class="bento-metric-grid">
+            <div class="big-stat">
+              <span class="big-num cyan">15</span>
+              <span class="big-lbl">Global Engineers Led</span>
+            </div>
+            <div class="big-stat">
+              <span class="big-num emerald">1,000+</span>
+              <span class="big-lbl">Enterprise Adoptions</span>
+            </div>
+            <div class="big-stat">
+              <span class="big-num violet">+35%</span>
+              <span class="big-lbl">Copilot Accuracy Lift</span>
+            </div>
+            <div class="big-stat">
+              <span class="big-num amber">50+</span>
+              <span class="big-lbl">Enterprise FDE Escalations</span>
+            </div>
+          </div>
+          <div class="bento-submetrics">
+            <span><strong>12+ Yrs</strong> Cybersecurity</span>
+            <span>·</span>
+            <span><strong>7+ Yrs</strong> Microsoft</span>
+            <span>·</span>
+            <span><strong>200+</strong> KQL Rules (-50% MTTR)</span>
+            <span>·</span>
+            <span><strong>-30%</strong> False Positives</span>
+          </div>
+        </article>
+
+        <!-- CARD 3: INTERACTIVE ARCHITECTURE VISUAL -->
+        <article class="bento-card bento-arch">
+          <div class="card-header-inline">
+            <div>
+              <span class="card-kicker">INTERACTIVE SYSTEM FLOW</span>
+              <h2 class="card-title-sm">Agentic Security &amp; MCP Architecture</h2>
+            </div>
+            <span class="arch-hint">Click any node to inspect</span>
+          </div>
+
+          <div class="visual-flow-nodes" role="tablist" aria-label="Architecture Nodes">
+            <button type="button" class="flow-node active" data-bento-node="asrs">
+              <span class="node-tag">STAGE 01</span>
+              <strong>ASRS Engine</strong>
+              <small>Multi-SIEM Reasoning</small>
+            </button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button type="button" class="flow-node" data-bento-node="kql">
+              <span class="node-tag">STAGE 02</span>
+              <strong>MCP KQL Server</strong>
+              <small>Schema-Grounded NL2KQL</small>
+            </button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button type="button" class="flow-node" data-bento-node="cti">
+              <span class="node-tag">STAGE 03</span>
+              <strong>FastMCP ThreatIntel</strong>
+              <small>STIX 2.1 &amp; ATT&amp;CK Graph</small>
+            </button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button type="button" class="flow-node" data-bento-node="arc">
+              <span class="node-tag">STAGE 04</span>
+              <strong>Assured-Arc Gate</strong>
+              <small>AI Red-Team &amp; Verifier</small>
+            </button>
+          </div>
+
+          <div class="flow-readout" id="bento-flow-readout">
+            <span class="readout-badge" id="bento-readout-badge">LIVE PRODUCTION</span>
+            <p id="bento-readout-text">
+              <strong>ASRS (Autonomous Security Reasoning System):</strong> Correlates telemetry across Microsoft Sentinel, Splunk, Elastic &amp; CrowdStrike with parallel hypothesis validation.
+            </p>
+            <a id="bento-readout-link" href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener" class="readout-cta">Launch Live Demo ↗</a>
+          </div>
+        </article>
+
+        <!-- CARD 4: 4 FLAGSHIP PRODUCTS -->
+        <article class="bento-card bento-products">
+          <div class="card-kicker">SHIPPED OPEN-SOURCE &amp; ENTERPRISE SYSTEMS</div>
+          <div class="product-mini-grid">
+            <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener" class="prod-tile">
+              <div class="prod-top">
+                <span class="prod-icon cyan-bg">⚡</span>
+                <span class="prod-badge">LIVE DEMO</span>
+              </div>
+              <h3>ASRS Autonomous SOC</h3>
+              <p>Cross-SIEM agentic triage across Sentinel, Splunk, Elastic &amp; CrowdStrike.</p>
+            </a>
+
+            <a href="https://github.com/4R9UN/mcp-kql-server" target="_blank" rel="noopener" class="prod-tile">
+              <div class="prod-top">
+                <span class="prod-icon emerald-bg">⌘</span>
+                <span class="prod-badge">PyPI v2.1.5 · MCP Registry</span>
+              </div>
+              <h3>mcp-kql-server</h3>
+              <p>Official MCP Registry &amp; MseeP-verified NL2KQL server with semantic memory.</p>
+            </a>
+
+            <a href="https://github.com/4R9UN/fastmcp-threatintel" target="_blank" rel="noopener" class="prod-tile">
+              <div class="prod-top">
+                <span class="prod-icon violet-bg">🛡</span>
+                <span class="prod-badge">★ 40 Stars · PyPI v0.2.7</span>
+              </div>
+              <h3>fastmcp-threatintel</h3>
+              <p>Multi-source CTI (VirusTotal, OTX, AbuseIPDB) + MITRE ATT&amp;CK + STIX 2.1.</p>
+            </a>
+
+            <a href="https://github.com/4R9UN/Assured-Arc" target="_blank" rel="noopener" class="prod-tile">
+              <div class="prod-top">
+                <span class="prod-icon amber-bg">🔒</span>
+                <span class="prod-badge">28 Skills · Bounded Loop</span>
+              </div>
+              <h3>Assured-Arc Harness</h3>
+              <p>Portable multi-agent harness with prompt-injection isolation &amp; verification.</p>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 5: CAREER & RECOGNITION STRIP -->
+        <article class="bento-card bento-strip">
+          <div class="strip-col">
+            <span class="card-kicker">CAREER TRAJECTORY (100M+ USERS PROTECTED)</span>
+            <div class="career-steps">
+              <div class="c-step active">
+                <strong>Microsoft</strong>
+                <span>Senior Security Researcher · 2019–Present (7+ Yrs)</span>
+              </div>
+              <span class="c-sep">→</span>
+              <div class="c-step">
+                <strong>Wipro</strong>
+                <span>Sr. Threat Hunter · 2016–2019</span>
+              </div>
+              <span class="c-sep">→</span>
+              <div class="c-step">
+                <strong>Sophos</strong>
+                <span>Malware Specialist · 2015–2016</span>
+              </div>
+            </div>
+          </div>
+          <div class="strip-col strip-recognitions">
+            <span class="card-kicker">RECOGNITION &amp; COMMUNITY</span>
+            <div class="rec-pills">
+              <span class="rec-tag">🏆 Winner — Microsoft Global Hackathon 2023</span>
+              <a href="https://youtu.be/T0213_VfW7U" target="_blank" rel="noopener" class="rec-tag link">🎙 AZ Security Podcast Ep. 27 ↗</a>
+              <a href="https://arjuntrivedi.substack.com" target="_blank" rel="noopener" class="rec-tag link">📰 1,900+ Substack Subscribers ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TEMPLATE 2: SPLIT-SCREEN EDITORIAL (BRITTANY CHIANG / PACO STYLE)
+         =================================================================== -->
+    <section id="tpl-editorial" class="template-view" data-template-view="editorial" aria-label="Split-Screen Editorial Portfolio">
+      <div class="editorial-shell">
+
+        <!-- Sticky Left 40% Column -->
+        <aside class="editorial-left">
+          <div class="editorial-avatar-wrap">
+            <div class="portrait-frame portrait-circle">
+              <img src="assets/arjun-vector-blue.png" alt="Arjun Trivedi portrait" data-arjun-avatar />
+            </div>
+            <span class="editorial-status">OPEN TO PRINCIPAL / DIRECTOR / AI FDE ROLES</span>
+          </div>
+
+          <h1 class="editorial-title">Arjun Trivedi</h1>
+          <p class="editorial-subtitle">
+            Senior Security Research Leader at <strong>Microsoft</strong>. Building autonomous security agents, schema-grounded MCP servers, and enterprise detections at global scale.
+          </p>
+
+          <div class="editorial-role-tags">
+            <span>Agentic AI Architect</span>
+            <span>Security Research Leader</span>
+            <span>AI Forward Deployed Engineer</span>
+          </div>
+
+          <nav class="editorial-nav" aria-label="Editorial section links">
+            <a href="#ed-impact" class="ed-nav-link active"><span>01</span> Executive Impact</a>
+            <a href="#ed-systems" class="ed-nav-link"><span>02</span> Flagship Systems</a>
+            <a href="#ed-workflow" class="ed-nav-link"><span>03</span> Architecture Diagram</a>
+            <a href="#ed-experience" class="ed-nav-link"><span>04</span> Leadership Track</a>
+          </nav>
+
+          <div class="editorial-socials">
+            <a href="assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf" download class="btn-solid btn-sm">Download CV</a>
+            <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener" class="btn-glass btn-sm">ASRS Demo ↗</a>
+            <a href="https://www.linkedin.com/in/imarjuntrivedi/" target="_blank" rel="noopener" class="btn-glass btn-sm">LinkedIn ↗</a>
+            <a href="https://github.com/4R9UN" target="_blank" rel="noopener" class="btn-glass btn-sm">GitHub ↗</a>
+          </div>
+        </aside>
+
+        <!-- Scrollable Right 60% Column -->
+        <div class="editorial-right">
+
+          <div id="ed-impact" class="ed-block">
+            <div class="ed-section-head">01 // EXECUTIVE IMPACT AT A GLANCE</div>
+            <div class="ed-stat-list">
+              <div class="ed-stat-card spotlight-card">
+                <span class="ed-stat-val cyan">+35%</span>
+                <div>
+                  <strong>Microsoft Security Copilot &amp; Project Perception</strong>
+                  <p>Lifted threat summarization accuracy by 35% via RAG grounding &amp; red-teamed agentic tool boundaries.</p>
+                </div>
+              </div>
+              <div class="ed-stat-card spotlight-card">
+                <span class="ed-stat-val emerald">1,000+</span>
+                <div>
+                  <strong>Enterprise Sentinel &amp; Forward-Deployed Adoption</strong>
+                  <p>Partnered with 50+ global enterprises (+20% CSAT) and shipped Multi Cloud Attack Coverage Essentials to 1,000+ orgs.</p>
+                </div>
+              </div>
+              <div class="ed-stat-card spotlight-card">
+                <span class="ed-stat-val violet">15</span>
+                <div>
+                  <strong>Global Security Research &amp; Detection Engineers Led</strong>
+                  <p>200+ KQL rules cutting MTTR up to 50% and production ML models reducing false positives by 30%.</p>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="hiring-right">
-              <div class="contact-card">
-                <div class="contact-row">
-                  <span class="mono-tag">DIRECT EMAIL</span>
-                  <div class="email-copy-group">
-                    <a href="mailto:arjuntrivedi42@yahoo.com" class="contact-email">arjuntrivedi42@yahoo.com</a>
-                    <button type="button" class="btn btn-glass btn-xs" id="copy-email-btn" data-email="arjuntrivedi42@yahoo.com">Copy</button>
+          <div id="ed-systems" class="ed-block">
+            <div class="ed-section-head">02 // FLAGSHIP PRODUCTION SYSTEMS</div>
+            <div class="ed-project-list">
+              <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener" class="ed-proj-row spotlight-card">
+                <div class="ed-proj-meta">LIVE VERCEL</div>
+                <div class="ed-proj-body">
+                  <h3>ASRS — Autonomous Security Reasoning System ↗</h3>
+                  <p>Multi-agent investigation plane across Microsoft Sentinel, Splunk, Elastic &amp; CrowdStrike.</p>
+                  <div class="ed-tags"><span>Agentic SOC</span><span>Multi-SIEM</span><span>Automated Triage</span></div>
+                </div>
+              </a>
+
+              <a href="https://github.com/4R9UN/mcp-kql-server" target="_blank" rel="noopener" class="ed-proj-row spotlight-card">
+                <div class="ed-proj-meta">PyPI v2.1.5</div>
+                <div class="ed-proj-body">
+                  <h3>mcp-kql-server — Official MCP Registry Server ↗</h3>
+                  <p>Schema-pinned NL2KQL execution engine with semantic memory &amp; Azure Container Apps deployment.</p>
+                  <div class="ed-tags"><span>Official MCP Registry</span><span>MseeP Verified</span><span>Azure Kusto</span></div>
+                </div>
+              </a>
+
+              <a href="https://github.com/4R9UN/fastmcp-threatintel" target="_blank" rel="noopener" class="ed-proj-row spotlight-card">
+                <div class="ed-proj-meta">★ 40 STARS</div>
+                <div class="ed-proj-body">
+                  <h3>fastmcp-threatintel — CTI &amp; ATT&amp;CK MCP Server ↗</h3>
+                  <p>Real-time IOC enrichment across VirusTotal, AlienVault OTX &amp; AbuseIPDB with STIX 2.1 + D3.js graphs.</p>
+                  <div class="ed-tags"><span>PyPI v0.2.7</span><span>14 Forks</span><span>MITRE ATT&amp;CK</span></div>
+                </div>
+              </a>
+
+              <a href="https://github.com/4R9UN/Assured-Arc" target="_blank" rel="noopener" class="ed-proj-row spotlight-card">
+                <div class="ed-proj-meta">28 SKILLS</div>
+                <div class="ed-proj-body">
+                  <h3>Assured-Arc — Bounded Multi-Agent Harness ↗</h3>
+                  <p>Portable GitHub Copilot orchestration framework enforcing deterministic verification &amp; prompt-injection isolation.</p>
+                  <div class="ed-tags"><span>Agent Governance</span><span>AI Security</span><span>Zero-Trust MCP</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div id="ed-workflow" class="ed-block">
+            <div class="ed-section-head">03 // AGENTIC SECURITY ARCHITECTURE</div>
+            <div class="ed-svg-card">
+              <img src="assets/agentic-security-workflow.svg" alt="Agentic Security Architecture Diagram" />
+            </div>
+          </div>
+
+          <div id="ed-experience" class="ed-block">
+            <div class="ed-section-head">04 // EXECUTIVE LEADERSHIP TRACK</div>
+            <div class="ed-timeline">
+              <div class="ed-tl-item">
+                <span class="ed-tl-date">2019 — PRESENT</span>
+                <div>
+                  <h3>Senior Security Researcher · Microsoft</h3>
+                  <p>Leads 15 global detection &amp; AI security researchers. Core contributor to Project Perception, Security Copilot (+35% lift), and Microsoft Threat Experts.</p>
+                </div>
+              </div>
+              <div class="ed-tl-item">
+                <span class="ed-tl-date">2016 — 2019</span>
+                <div>
+                  <h3>Senior Analyst (Threat Hunting) · Wipro</h3>
+                  <p>Led 10-analyst 24x7 threat hunting unit; delivered 100+ executive threat advisories (-35% dwell time).</p>
+                </div>
+              </div>
+              <div class="ed-tl-item">
+                <span class="ed-tl-date">2015 — 2016</span>
+                <div>
+                  <h3>Technical Support Specialist · Sophos</h3>
+                  <p>Reverse-engineered 50+ ransomware &amp; zero-day samples; authored 30+ behavioral endpoint signatures.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TEMPLATE 3: EXECUTIVE SPOTLIGHT / FOUNDER CARD (LUXURY MINIMAL)
+         =================================================================== -->
+    <section id="tpl-spotlight" class="template-view" data-template-view="spotlight" aria-label="Executive Spotlight Minimalist Portfolio">
+      <div class="spotlight-shell">
+
+        <!-- Centered Luxury Hero -->
+        <div class="founder-hero">
+          <div class="founder-ring-wrap">
+            <div class="founder-orbit-ring"></div>
+            <div class="portrait-frame portrait-founder">
+              <img src="assets/arjun-vector-blue.png" alt="Arjun Trivedi portrait" data-arjun-avatar />
+            </div>
+            <span class="founder-badge">MICROSOFT · SENIOR SECURITY RESEARCH LEADER</span>
+          </div>
+
+          <h1 class="founder-headline">
+            Architecting <span class="grad-text">Autonomous AI Defense</span> for the World’s Largest Enterprises.
+          </h1>
+          <p class="founder-sub">
+            Arjun Trivedi leads a 15-engineer global research org at Microsoft—bridging Agentic AI Systems, AI Red Teaming, and Forward-Deployed Enterprise Execution.
+          </p>
+
+          <div class="founder-cta-row">
+            <a href="assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf" download class="btn-solid">Download Executive Dossier (PDF)</a>
+            <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener" class="btn-glass">Launch ASRS Live Demo ↗</a>
+            <a href="mailto:arjuntrivedi42@yahoo.com" class="btn-glass">Direct Executive Inquiry</a>
+          </div>
+        </div>
+
+        <!-- 3 Interactive Expand-on-Click/Hover Pillar Cards -->
+        <div class="founder-pillars-head">
+          <span>THREE SIGNATURE MANDATES — CLICK OR HOVER TO REVEAL PROOF</span>
+        </div>
+        <div class="founder-pillars-grid">
+          <div class="flip-pillar active" tabindex="0" data-flip-card>
+            <div class="fp-front">
+              <span class="fp-index">PILLAR 01</span>
+              <h2>Agentic AI &amp; AI Security Architect</h2>
+              <div class="fp-hero-metric cyan">+35% Copilot Accuracy</div>
+            </div>
+            <div class="fp-detail">
+              <p>Project Perception hunting agents · AI Red Teaming (prompt injection &amp; tool guardrails) · Official MCP Registry creator (<code>mcp-kql-server</code> &amp; <code>fastmcp-threatintel</code>).</p>
+            </div>
+          </div>
+
+          <div class="flip-pillar" tabindex="0" data-flip-card>
+            <div class="fp-front">
+              <span class="fp-index">PILLAR 02</span>
+              <h2>AI Forward Deployed Engineering (FDE)</h2>
+              <div class="fp-hero-metric emerald">1,000+ Enterprise Adoptions</div>
+            </div>
+            <div class="fp-detail">
+              <p>50+ CISO &amp; SOC field escalations resolved (+20% CSAT) · Co-created Multi Cloud Attack Coverage Essentials across AWS, GCP, Azure &amp; Okta.</p>
+            </div>
+          </div>
+
+          <div class="flip-pillar" tabindex="0" data-flip-card>
+            <div class="fp-front">
+              <span class="fp-index">PILLAR 03</span>
+              <h2>Detection &amp; Applied ML Leadership</h2>
+              <div class="fp-hero-metric violet">15 Engineers · -50% MTTR</div>
+            </div>
+            <div class="fp-detail">
+              <p>200+ production KQL correlation rules · ML ensemble models cutting false positives by 30% · Winner of Microsoft Global Hackathon 2023.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sleek Horizontal Showcase Carousel -->
+        <div class="founder-carousel-wrap">
+          <div class="carousel-header">
+            <span class="card-kicker">PRODUCTION ARTIFACTS</span>
+            <div class="carousel-controls">
+              <button type="button" class="car-btn" id="car-prev" aria-label="Previous system">←</button>
+              <button type="button" class="car-btn" id="car-next" aria-label="Next system">→</button>
+            </div>
+          </div>
+          <div class="founder-carousel" id="founder-carousel">
+            <article class="car-slide">
+              <span class="car-tag cyan">LIVE SYSTEM</span>
+              <h3>ASRS Multi-SIEM Reasoning</h3>
+              <p>Autonomous triage across Sentinel, Splunk, Elastic &amp; CrowdStrike.</p>
+              <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener">Open Live App ↗</a>
+            </article>
+            <article class="car-slide">
+              <span class="car-tag emerald">PyPI v2.1.5</span>
+              <h3>MCP KQL Server</h3>
+              <p>Official MCP Registry NL2KQL server with schema pinning &amp; semantic memory.</p>
+              <a href="https://github.com/4R9UN/mcp-kql-server" target="_blank" rel="noopener">View Repository ↗</a>
+            </article>
+            <article class="car-slide">
+              <span class="car-tag violet">★ 40 STARS · PyPI v0.2.7</span>
+              <h3>FastMCP ThreatIntel</h3>
+              <p>VirusTotal, OTX &amp; AbuseIPDB enrichment mapped to MITRE ATT&amp;CK &amp; STIX 2.1.</p>
+              <a href="https://github.com/4R9UN/fastmcp-threatintel" target="_blank" rel="noopener">View Repository ↗</a>
+            </article>
+            <article class="car-slide">
+              <span class="car-tag amber">1,000+ ENTERPRISES</span>
+              <h3>Multi-Cloud Attack Coverage</h3>
+              <p>Cross-cloud detection framework shipped in Microsoft Sentinel Content Hub.</p>
+              <a href="https://github.com/4R9UN/Multi-Cloud-Notebooks" target="_blank" rel="noopener">View Notebooks ↗</a>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TEMPLATE 4: INTERACTIVE CYBER-OS / COMMAND DECK (HUD / MACOS DOCK)
+         =================================================================== -->
+    <section id="tpl-cyberos" class="template-view" data-template-view="cyberos" aria-label="Interactive Cyber-OS Command Deck Portfolio">
+      <div class="cyberos-shell">
+
+        <!-- Main OS Window -->
+        <div class="os-window">
+          <!-- OS Title Bar -->
+          <div class="os-titlebar">
+            <div class="os-traffic">
+              <span class="dot-red"></span>
+              <span class="dot-yellow"></span>
+              <span class="dot-green"></span>
+            </div>
+            <div class="os-window-title">ARJUN_TRIVEDI_COMMAND_OS // v4.2 // CLEARANCE: PRINCIPAL_DIRECTOR_FDE</div>
+            <div class="os-telemetry-pill">
+              <span class="pulse-dot"></span> TELEMETRY ONLINE
+            </div>
+          </div>
+
+          <div class="os-body">
+            <!-- Left Operator ID Badge Sidebar -->
+            <aside class="os-sidebar">
+              <div class="os-id-card">
+                <div class="portrait-frame portrait-os">
+                  <img src="assets/arjun-vector-blue.png" alt="Arjun Trivedi ID portrait" data-arjun-avatar />
+                </div>
+                <div class="os-id-meta">
+                  <span class="os-callsign">OPERATOR // @4R9UN</span>
+                  <h2>Arjun Trivedi</h2>
+                  <p>Sr. Security Research Leader @ Microsoft</p>
+                </div>
+                <div class="os-bars">
+                  <div class="os-bar-row">
+                    <span>AGENTIC AI / MCP</span>
+                    <div class="os-bar"><div class="os-fill cyan-fill" style="width:98%"></div></div>
+                  </div>
+                  <div class="os-bar-row">
+                    <span>FORWARD DEPLOYED ENG</span>
+                    <div class="os-bar"><div class="os-fill emerald-fill" style="width:96%"></div></div>
+                  </div>
+                  <div class="os-bar-row">
+                    <span>DETECTION &amp; APPLIED ML</span>
+                    <div class="os-bar"><div class="os-fill violet-fill" style="width:97%"></div></div>
                   </div>
                 </div>
-                <div class="contact-row">
-                  <span class="mono-tag">DIRECT PHONE</span>
-                  <a href="tel:+919999691778" class="contact-val">+91 9999691778 · Hyderabad, India</a>
+                <div class="os-quick-links">
+                  <a href="assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf" download class="btn-solid btn-sm">Download CV</a>
+                  <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener" class="btn-glass btn-sm">ASRS Live ↗</a>
                 </div>
-                <div class="contact-cta-stack">
-                  <a href="./assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf" download class="btn btn-cyan btn-block">
-                    📄 Download Executive CV (2026 PDF)
+              </div>
+            </aside>
+
+            <!-- Right Interactive HUD Workspace -->
+            <div class="os-workspace">
+              <!-- HUD Tabs -->
+              <div class="os-tabs" role="tablist" aria-label="Cyber-OS Command Modules">
+                <button type="button" class="os-tab active" role="tab" aria-selected="true" data-os-tab="identity">[01_IDENTITY]</button>
+                <button type="button" class="os-tab" role="tab" aria-selected="false" data-os-tab="systems">[02_AGENTIC_SYSTEMS]</button>
+                <button type="button" class="os-tab" role="tab" aria-selected="false" data-os-tab="fde">[03_FDE_IMPACT]</button>
+                <button type="button" class="os-tab" role="tab" aria-selected="false" data-os-tab="svg">[04_ARCHITECTURE_SVG]</button>
+              </div>
+
+              <!-- Panel 01: IDENTITY -->
+              <div class="os-panel active" data-os-panel="identity">
+                <div class="os-hud-grid">
+                  <div class="os-hud-box">
+                    <span class="hud-lbl">LEADERSHIP SCOPE</span>
+                    <strong class="hud-val cyan">15 Engineers</strong>
+                    <p>Global Detection Engineering &amp; AI Security Research team at Microsoft.</p>
+                  </div>
+                  <div class="os-hud-box">
+                    <span class="hud-lbl">COPILOT &amp; PERCEPTION</span>
+                    <strong class="hud-val emerald">+35% Accuracy</strong>
+                    <p>RAG context grounding, vector tuning &amp; AI Red Teaming for Microsoft Security Copilot.</p>
+                  </div>
+                  <div class="os-hud-box">
+                    <span class="hud-lbl">ENTERPRISE REACH</span>
+                    <strong class="hud-val violet">1,000+ Orgs</strong>
+                    <p>Multi Cloud Attack Coverage Essentials + 50+ CISO/SOC FDE escalations resolved.</p>
+                  </div>
+                  <div class="os-hud-box">
+                    <span class="hud-lbl">RECOGNITION</span>
+                    <strong class="hud-val amber">Hackathon Winner</strong>
+                    <p>Microsoft Global Hackathon 2023 Winner · AZ Security Podcast Ep. 27 · 1,900+ Readers.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel 02: AGENTIC SYSTEMS -->
+              <div class="os-panel" data-os-panel="systems">
+                <div class="os-hud-grid">
+                  <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener" class="os-hud-box link-box">
+                    <span class="hud-lbl">LIVE VERCEL DEPLOYMENT</span>
+                    <strong class="hud-val cyan">ASRS Engine ↗</strong>
+                    <p>Autonomous investigation across Sentinel, Splunk, Elastic &amp; CrowdStrike.</p>
                   </a>
-                  <a href="https://www.linkedin.com/in/imarjuntrivedi/" target="_blank" rel="noopener noreferrer" class="btn btn-emerald btn-block">
-                    💼 Connect on LinkedIn (@imarjuntrivedi)
+                  <a href="https://github.com/4R9UN/mcp-kql-server" target="_blank" rel="noopener" class="os-hud-box link-box">
+                    <span class="hud-lbl">OFFICIAL MCP REGISTRY · PyPI v2.1.5</span>
+                    <strong class="hud-val emerald">mcp-kql-server ↗</strong>
+                    <p>Schema-pinned NL2KQL execution engine with semantic memory &amp; ACA microservice.</p>
                   </a>
-                  <a href="https://asrs-demo-v1.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-block">
-                    ⚡ Explore ASRS Multi-SIEM Live Demo
+                  <a href="https://github.com/4R9UN/fastmcp-threatintel" target="_blank" rel="noopener" class="os-hud-box link-box">
+                    <span class="hud-lbl">★ 40 STARS · 14 FORKS · PyPI v0.2.7</span>
+                    <strong class="hud-val violet">fastmcp-threatintel ↗</strong>
+                    <p>VirusTotal, OTX &amp; AbuseIPDB correlation with STIX 2.1 &amp; MITRE ATT&amp;CK graphs.</p>
                   </a>
+                  <a href="https://github.com/4R9UN/Assured-Arc" target="_blank" rel="noopener" class="os-hud-box link-box">
+                    <span class="hud-lbl">28 SKILLS · BOUNDED AGENT HARNESS</span>
+                    <strong class="hud-val amber">Assured-Arc ↗</strong>
+                    <p>Deterministic verification &amp; prompt-injection isolation for multi-agent workflows.</p>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Panel 03: FDE IMPACT -->
+              <div class="os-panel" data-os-panel="fde">
+                <div class="os-svg-preview">
+                  <img src="assets/fde-execution-loop.svg" alt="AI Forward Deployed Engineering Flywheel" />
+                </div>
+                <div class="os-fde-metrics">
+                  <span><strong>50+</strong> Enterprise Field Escalations</span>
+                  <span><strong>+20%</strong> Enterprise CSAT Lift</span>
+                  <span><strong>-50%</strong> Incident MTTR (200+ KQL Rules)</span>
+                  <span><strong>-30%</strong> False Positives (Applied ML)</span>
+                </div>
+              </div>
+
+              <!-- Panel 04: ARCHITECTURE SVG -->
+              <div class="os-panel" data-os-panel="svg">
+                <div class="os-svg-preview">
+                  <img src="assets/agentic-security-workflow.svg" alt="4-Stage Agentic Security Workflow Diagram" />
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Bottom macOS / Cyber Dock -->
+          <div class="os-dock" role="toolbar" aria-label="Cyber-OS Quick Launch Dock">
+            <button type="button" class="dock-item active" data-os-dock="identity">01 Identity</button>
+            <button type="button" class="dock-item" data-os-dock="systems">02 Agentic Systems</button>
+            <button type="button" class="dock-item" data-os-dock="fde">03 FDE Flywheel</button>
+            <button type="button" class="dock-item" data-os-dock="svg">04 Architecture SVG</button>
+            <span class="dock-sep"></span>
+            <a href="https://www.linkedin.com/in/imarjuntrivedi/" target="_blank" rel="noopener" class="dock-item">LinkedIn ↗</a>
+            <a href="https://github.com/4R9UN" target="_blank" rel="noopener" class="dock-item">GitHub ↗</a>
+          </div>
         </div>
+
       </div>
     </section>
+
   </main>
 
-  <!-- Accessible Architecture Modal for Flagship Systems -->
-  <dialog class="arch-modal glass-panel" id="arch-modal" aria-labelledby="modal-title">
-    <div class="modal-inner">
-      <div class="modal-header">
-        <div>
-          <span class="mono-tag" id="modal-category">SYSTEM ARCHITECTURE SPECIFICATION</span>
-          <h3 id="modal-title">System Name</h3>
-        </div>
-        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close Architecture Modal">✕</button>
-      </div>
-      <div class="modal-body">
-        <p id="modal-summary"></p>
-        <div class="modal-highlights" id="modal-highlights"></div>
-        <div class="code-terminal">
-          <div class="terminal-bar">
-            <span class="panel-dots"><i></i><i></i><i></i></span>
-            <span class="mono-tag">ARCHITECTURE_TOPOLOGY.TXT</span>
-          </div>
-          <pre><code id="modal-code"></code></pre>
-        </div>
-      </div>
-      <div class="modal-footer" id="modal-links"></div>
-    </div>
-  </dialog>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <strong>ARJUN TRIVEDI (<code>@4R9UN</code>)</strong> · Senior Security Research Leader · Agentic AI Architect · AI FDE Leader
-      </div>
-      <div class="footer-links">
-        <a href="https://github.com/4R9UN" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/imarjuntrivedi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://pypi.org/user/Arjun_Trivedi/" target="_blank" rel="noopener noreferrer">PyPI</a>
-        <a href="https://registry.modelcontextprotocol.io/?q=4R9UN" target="_blank" rel="noopener noreferrer">MCP Registry</a>
-        <a href="https://arjuntrivedi.substack.com" target="_blank" rel="noopener noreferrer">Newsletter</a>
-        <a href="./assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf" download>CV PDF</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="./app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
