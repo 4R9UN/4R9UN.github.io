@@ -27,6 +27,7 @@
 
   function setDesignSystem(dsKey) {
     document.documentElement.setAttribute('data-design', dsKey);
+    document.documentElement.setAttribute('data-theme', dsKey);
     dsButtons.forEach((btn) => {
       const active = btn.getAttribute('data-design-btn') === dsKey;
       btn.classList.toggle('active', active);
@@ -72,7 +73,7 @@
 class ArjunTrivediExecutiveLeader:
     role       = "Senior Security Researcher | Detection Eng & AI Security"
     org        = "Microsoft (7+ Yrs Microsoft | 12+ Yrs Cybersecurity)"
-    team_scope = "15 Global Detection & AI Security Researchers Led"
+    leadership = "Global Security Research & Applied Science Team Leadership"
     pillars    = [
         "Agentic AI & MCP Architecture (Project Perception, Security Copilot +35%)",
         "AI Forward Deployed Engineering (50+ Enterprises, +20% CSAT, 1,000+ Adoptions)",
@@ -168,5 +169,63 @@ adversarial_gates:
         pane.classList.toggle('active', pane.getAttribute('data-arch-pane') === key);
       });
     });
+  });
+
+  // 8. QUICKSTART STACK STAGE SWITCHER (STAGE 01&02 / STAGE 03 / STAGE 04)
+  const qsBtns = document.querySelectorAll('[data-qs-tab]');
+  const qsPanes = document.querySelectorAll('[data-qs-pane]');
+  qsBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const key = btn.getAttribute('data-qs-tab');
+      qsBtns.forEach((b) => b.classList.toggle('active', b === btn));
+      qsPanes.forEach((pane) => {
+        pane.classList.toggle('active', pane.getAttribute('data-qs-pane') === key);
+      });
+    });
+  });
+
+  // 9. 1-CLICK CLIPBOARD COPY HANDLERS (MCP CONFIG, CLI SNIPPETS, EMAIL)
+  function copyTextWithFeedback(btn, textToCopy) {
+    if (!textToCopy) return;
+    const origLabel = btn.getAttribute('data-orig-label') || btn.textContent;
+    btn.setAttribute('data-orig-label', origLabel);
+    btn.classList.add('copied');
+    btn.textContent = '✓ Copied!';
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.textContent = origLabel;
+    }, 1800);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(textToCopy).catch(() => {});
+    }
+  }
+
+  document.querySelectorAll('.copy-trigger').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const directText = btn.getAttribute('data-copy-text');
+      const targetId = btn.getAttribute('data-copy-target');
+      const targetEl = targetId ? document.getElementById(targetId) : null;
+      const text = directText || (targetEl ? targetEl.textContent : '');
+      copyTextWithFeedback(btn, text);
+    });
+  });
+
+  // 10. KEYBOARD SHORTCUTS (1-6 DESIGN SWITCH · C COPY EMAIL · / JUMP TO STACK)
+  const DS_ORDER = ['linear', 'claude', 'cursor', 'vercel', 'raycast', 'stripe'];
+  window.addEventListener('keydown', (e) => {
+    const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
+    if (tag === 'input' || tag === 'textarea' || e.metaKey || e.ctrlKey || e.altKey) return;
+
+    if (e.key >= '1' && e.key <= '6') {
+      const idx = parseInt(e.key, 10) - 1;
+      if (DS_ORDER[idx]) setDesignSystem(DS_ORDER[idx]);
+    } else if (e.key === 'c' || e.key === 'C') {
+      const emailBtn = document.getElementById('copy-email-btn');
+      if (emailBtn) emailBtn.click();
+    } else if (e.key === '/') {
+      e.preventDefault();
+      const archSec = document.getElementById('sec-architecture');
+      if (archSec) archSec.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 })();

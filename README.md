@@ -8,7 +8,7 @@
 
 ## ⚡ Overview
 
-Zero-build-step, high-performance **Cyber-Executive Command Center** portfolio website for **Arjun Trivedi (`@4R9UN`)** — Senior Security Research Leader at Microsoft (12+ years in Cybersecurity, 7+ years at Microsoft, directly leading a 15-person global detection engineering & security research team).
+Zero-build-step, high-performance **Cyber-Executive Command Center** portfolio website for **Arjun Trivedi (`@4R9UN`)** — Senior Security Research Leader at Microsoft (12+ years in Cybersecurity, 7+ years at Microsoft, leading global Security Research & Applied Science teams across Agentic AI, Detection Engineering, and AI Forward Deployed Engineering).
 
 ### Key Interactive Features
 - **Recruiter Role-Lens Switcher:** Dynamically filters and spotlights accomplishments across four executive lenses:
