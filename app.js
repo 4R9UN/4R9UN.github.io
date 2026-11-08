@@ -1,208 +1,172 @@
 /**
- * ARJUN TRIVEDI (@4R9UN) — MULTI-TEMPLATE EXECUTIVE PORTFOLIO CONTROLLER
- * Supports instant live switching between:
- *  - 4 distinct portfolio templates (bento, editorial, spotlight, cyberos)
- *  - 3 portrait avatars (vector-blue, vector-teal, real-photo)
- *  - Interactive Bento Architecture flow nodes
- *  - Cyber-OS tabs + dock sync
+ * ARJUN TRIVEDI (@4R9UN) — 6 GETDESIGN.MD DESIGN SYSTEMS CONTROLLER
+ *  01. Linear.app       (design-md/linear.app/DESIGN.md)
+ *  02. Claude/Anthropic (design-md/claude/DESIGN.md)
+ *  03. Cursor AI        (design-md/cursor/DESIGN.md)
+ *  04. Vercel Geist     (design-md/vercel/DESIGN.md)
+ *  05. Raycast Pro      (design-md/raycast/DESIGN.md)
+ *  06. Stripe Executive (design-md/stripe/DESIGN.md)
  */
 
 (() => {
   'use strict';
 
-  // 1. LIVE TEMPLATE SWITCHER
-  const tplButtons = document.querySelectorAll('[data-template-btn]');
-  const tplViews = document.querySelectorAll('[data-template-view]');
+  const DS_LABELS = {
+    linear: 'LINEAR.APP DESIGN SYSTEM // PITCH-BLACK PRECISION (#010102 · #5E6AD2)',
+    claude: 'CLAUDE / ANTHROPIC DESIGN SYSTEM // EDITORIAL RESEARCH IVORY (#FAF9F5 · #CC785C)',
+    cursor: 'CURSOR AI DESIGN SYSTEM // STONE PAPER + IDE AGENT COMPOSER (#F7F7F4 · #F54E00)',
+    vercel: 'VERCEL GEIST DESIGN SYSTEM // ARCHITECTURAL MONOCHROME GRID (#FAFAFA · #0070F3)',
+    raycast: 'RAYCAST PRO DESIGN SYSTEM // COMMAND LAUNCHER HUD (#07080A · #FF6161)',
+    stripe: 'STRIPE EXECUTIVE DESIGN SYSTEM // INDIGO COMPOSITE TELEMETRY (#F6F9FC · #533AFD)'
+  };
 
-  function setTemplate(templateId) {
-    document.documentElement.setAttribute('data-template', templateId);
-    tplButtons.forEach((btn) => {
-      const active = btn.getAttribute('data-template-btn') === templateId;
+  // 1. DESIGN.MD SWITCHER (6 SYSTEMS)
+  const dsButtons = document.querySelectorAll('[data-design-btn]');
+  const dsHeroes = document.querySelectorAll('[data-design-hero]');
+  const dsLabelEl = document.getElementById('active-ds-label');
+
+  function setDesignSystem(dsKey) {
+    document.documentElement.setAttribute('data-design', dsKey);
+    dsButtons.forEach((btn) => {
+      const active = btn.getAttribute('data-design-btn') === dsKey;
       btn.classList.toggle('active', active);
       btn.setAttribute('aria-selected', String(active));
     });
-    tplViews.forEach((view) => {
-      const active = view.getAttribute('data-template-view') === templateId;
-      view.classList.toggle('active', active);
+    dsHeroes.forEach((hero) => {
+      hero.classList.toggle('active', hero.getAttribute('data-design-hero') === dsKey);
     });
+    if (dsLabelEl && DS_LABELS[dsKey]) {
+      dsLabelEl.textContent = DS_LABELS[dsKey];
+    }
   }
 
-  tplButtons.forEach((btn) => {
+  dsButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      setTemplate(btn.getAttribute('data-template-btn'));
+      setDesignSystem(btn.getAttribute('data-design-btn'));
     });
   });
 
-  // 2. LIVE PORTRAIT / AVATAR SWITCHER
-  const avatarButtons = document.querySelectorAll('[data-avatar-btn]');
-  const avatarImages = document.querySelectorAll('[data-arjun-avatar]');
+  // 2. PORTRAIT / HEADSHOT SWITCHER (4 PORTRAITS)
+  const avatarBtns = document.querySelectorAll('[data-avatar-btn]');
+  const avatarImgs = document.querySelectorAll('[data-arjun-avatar]');
 
   function setAvatar(avatarKey, srcPath) {
     document.documentElement.setAttribute('data-avatar', avatarKey);
-    avatarButtons.forEach((btn) => {
+    avatarBtns.forEach((btn) => {
       btn.classList.toggle('active', btn.getAttribute('data-avatar-btn') === avatarKey);
     });
-    avatarImages.forEach((img) => {
-      img.style.opacity = '0.35';
+    avatarImgs.forEach((img) => {
       img.setAttribute('src', srcPath);
-      requestAnimationFrame(() => {
-        img.style.opacity = '1';
-      });
     });
   }
 
-  avatarButtons.forEach((btn) => {
+  avatarBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       setAvatar(btn.getAttribute('data-avatar-btn'), btn.getAttribute('data-src'));
     });
   });
 
-  // 3. TEMPLATE 1 (BENTO): INTERACTIVE ARCHITECTURE FLOW NODES
-  const BENTO_NODES = {
-    asrs: {
-      badge: 'LIVE PRODUCTION',
-      text: '<strong>ASRS (Autonomous Security Reasoning System):</strong> Correlates telemetry across Microsoft Sentinel, Splunk, Elastic &amp; CrowdStrike with parallel hypothesis validation.',
-      linkText: 'Launch Live Demo ↗',
-      linkHref: 'https://asrs-demo-v1.vercel.app/'
-    },
-    kql: {
-      badge: 'PyPI v2.1.5 · MCP REGISTRY',
-      text: '<strong>mcp-kql-server:</strong> Official MCP Registry &amp; MseeP-verified server translating natural-language hunting intent into schema-grounded Azure Data Explorer KQL.',
-      linkText: 'Inspect Repository ↗',
-      linkHref: 'https://github.com/4R9UN/mcp-kql-server'
-    },
-    cti: {
-      badge: '★ 40 STARS · PyPI v0.2.7',
-      text: '<strong>fastmcp-threatintel:</strong> Enriches IOCs across VirusTotal, AlienVault OTX &amp; AbuseIPDB with automated MITRE ATT&amp;CK mapping &amp; STIX 2.1 graphs.',
-      linkText: 'Inspect Repository ↗',
-      linkHref: 'https://github.com/4R9UN/fastmcp-threatintel'
-    },
-    arc: {
-      badge: '28 SKILLS · ZERO-TRUST HARNESS',
-      text: '<strong>Assured-Arc Guardrail Gate:</strong> Enforces prompt-injection isolation, least-privilege tool policy, and deterministic verification before SOC actioning.',
-      linkText: 'Inspect Harness ↗',
-      linkHref: 'https://github.com/4R9UN/Assured-Arc'
-    }
+  // 3. CURSOR AI IDE TAB SWITCHER
+  const IDE_SNIPPETS = {
+    profile: `# arjun_executive_profile.py — Verified Production Telemetry
+class ArjunTrivediExecutiveLeader:
+    role       = "Senior Security Researcher | Detection Eng & AI Security"
+    org        = "Microsoft (7+ Yrs Microsoft | 12+ Yrs Cybersecurity)"
+    team_scope = "15 Global Detection & AI Security Researchers Led"
+    pillars    = [
+        "Agentic AI & MCP Architecture (Project Perception, Security Copilot +35%)",
+        "AI Forward Deployed Engineering (50+ Enterprises, +20% CSAT, 1,000+ Adoptions)",
+        "Applied ML & Detection Engineering (200+ KQL Rules -50% MTTR, ML -30% FP)"
+    ]`,
+    mcp: `# mcp_kql_server_v2.py — Official MCP Registry & PyPI v2.1.5
+from fastmcp import FastMCP
+mcp = FastMCP("mcp-kql-server", version="2.1.5")
+
+@mcp.tool()
+async def execute_schema_grounded_kql(nl_intent: str, cluster_uri: str) -> dict:
+    """Translates hunting intent to AST-validated KQL with semantic schema memory."""
+    schema = await semantic_memory.pin_tables(cluster_uri, nl_intent)
+    kql = await nl2kql_synthesizer.compile(nl_intent, schema=schema)
+    return await kusto_client.execute_verified(cluster_uri, kql)`,
+    redteam: `# ai_redteam_guardrails.yaml — Assured-Arc & Security Copilot Red Teaming
+suite: microsoft_ai_security_redteam
+lead: Arjun Trivedi (@4R9UN)
+adversarial_gates:
+  - prompt_injection_isolation: enforced
+  - indirect_instruction_defense: untrusted_telemetry_sandboxed
+  - tool_invocation_policy: least_privilege_allowlist
+  - excessive_agency_bound: max_depth_1_human_in_the_loop`
   };
 
-  const flowNodes = document.querySelectorAll('[data-bento-node]');
-  const readoutBadge = document.getElementById('bento-readout-badge');
-  const readoutText = document.getElementById('bento-readout-text');
-  const readoutLink = document.getElementById('bento-readout-link');
+  const ideTabs = document.querySelectorAll('[data-ide-tab]');
+  const codePane = document.getElementById('cursor-code-pane');
+  ideTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const key = tab.getAttribute('data-ide-tab');
+      ideTabs.forEach((t) => t.classList.toggle('active', t === tab));
+      if (codePane && IDE_SNIPPETS[key]) {
+        codePane.textContent = IDE_SNIPPETS[key];
+      }
+    });
+  });
 
-  flowNodes.forEach((btn) => {
+  // 4. RAYCAST COMMAND PALETTE LIVE FILTER
+  const rayInput = document.getElementById('raycast-input');
+  const rayItems = document.querySelectorAll('#raycast-cmd-list .ray-cmd-item');
+  if (rayInput) {
+    rayInput.addEventListener('input', () => {
+      const q = rayInput.value.trim().toLowerCase();
+      rayItems.forEach((item) => {
+        const hay = (item.textContent + ' ' + (item.getAttribute('data-ray-keywords') || '')).toLowerCase();
+        item.style.display = !q || hay.includes(q) ? 'grid' : 'none';
+      });
+    });
+    rayInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        rayInput.value = '';
+        rayItems.forEach((item) => { item.style.display = 'grid'; });
+      }
+    });
+  }
+
+  // 5. EXPERIENCE FILTER (ALL 5 ROLES / MICROSOFT / PRIOR)
+  const expBtns = document.querySelectorAll('[data-exp-filter]');
+  const expCards = document.querySelectorAll('[data-exp-org]');
+  expBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      const key = btn.getAttribute('data-bento-node');
-      const data = BENTO_NODES[key];
-      if (!data) return;
-      flowNodes.forEach((n) => n.classList.toggle('active', n === btn));
-      if (readoutBadge) readoutBadge.textContent = data.badge;
-      if (readoutText) readoutText.innerHTML = data.text;
-      if (readoutLink) {
-        readoutLink.textContent = data.linkText;
-        readoutLink.setAttribute('href', data.linkHref);
-      }
+      const filter = btn.getAttribute('data-exp-filter');
+      expBtns.forEach((b) => b.classList.toggle('active', b === btn));
+      expCards.forEach((card) => {
+        const match = filter === 'all' || card.getAttribute('data-exp-org') === filter;
+        card.style.display = match ? 'block' : 'none';
+      });
     });
   });
 
-  // 4. TEMPLATE 3 (SPOTLIGHT): INTERACTIVE PILLAR CARDS & CAROUSEL HIGHLIGHT
-  const flipCards = document.querySelectorAll('[data-flip-card]');
-  flipCards.forEach((card) => {
-    card.addEventListener('click', () => {
-      flipCards.forEach((c) => c.classList.toggle('active', c === card));
+  // 6. FLAGSHIP SYSTEMS FILTER (ALL 6 / MCP / CLOUD)
+  const projBtns = document.querySelectorAll('[data-proj-filter]');
+  const projCards = document.querySelectorAll('[data-proj-cat]');
+  projBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-proj-filter');
+      projBtns.forEach((b) => b.classList.toggle('active', b === btn));
+      projCards.forEach((card) => {
+        const match = filter === 'all' || card.getAttribute('data-proj-cat') === filter;
+        card.style.display = match ? 'flex' : 'none';
+      });
     });
   });
 
-  const carSlides = document.querySelectorAll('#founder-carousel .car-slide');
-  let activeSlide = 0;
-  function highlightSlide(idx) {
-    if (!carSlides.length) return;
-    activeSlide = (idx + carSlides.length) % carSlides.length;
-    carSlides.forEach((s, i) => {
-      s.style.borderColor = i === activeSlide ? 'var(--cyan)' : 'var(--border-subtle)';
+  // 7. ARCHITECTURE DIAGRAM SWITCHER (PIPELINE SVG / FDE FLYWHEEL SVG)
+  const archBtns = document.querySelectorAll('[data-arch-tab]');
+  const archPanes = document.querySelectorAll('[data-arch-pane]');
+  archBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const key = btn.getAttribute('data-arch-tab');
+      archBtns.forEach((b) => b.classList.toggle('active', b === btn));
+      archPanes.forEach((pane) => {
+        pane.classList.toggle('active', pane.getAttribute('data-arch-pane') === key);
+      });
     });
-  }
-  const prevBtn = document.getElementById('car-prev');
-  const nextBtn = document.getElementById('car-next');
-  if (prevBtn) prevBtn.addEventListener('click', () => highlightSlide(activeSlide - 1));
-  if (nextBtn) nextBtn.addEventListener('click', () => highlightSlide(activeSlide + 1));
-
-  // 5. TEMPLATE 4 (CYBER-OS): HUD TABS + BOTTOM DOCK SYNC
-  const osTabs = document.querySelectorAll('[data-os-tab]');
-  const osPanels = document.querySelectorAll('[data-os-panel]');
-  const osDockItems = document.querySelectorAll('[data-os-dock]');
-
-  function setOsPanel(panelId) {
-    osTabs.forEach((t) => {
-      const active = t.getAttribute('data-os-tab') === panelId;
-      t.classList.toggle('active', active);
-      t.setAttribute('aria-selected', String(active));
-    });
-    osPanels.forEach((p) => {
-      p.classList.toggle('active', p.getAttribute('data-os-panel') === panelId);
-    });
-    osDockItems.forEach((d) => {
-      d.classList.toggle('active', d.getAttribute('data-os-dock') === panelId);
-    });
-  }
-
-  osTabs.forEach((t) => {
-    t.addEventListener('click', () => setOsPanel(t.getAttribute('data-os-tab')));
   });
-  osDockItems.forEach((d) => {
-    d.addEventListener('click', () => setOsPanel(d.getAttribute('data-os-dock')));
-  });
-
-  // 6. SUBTLE AMBIENT PARTICLE FIELD
-  const canvas = document.getElementById('ambient-canvas');
-  if (canvas && canvas.getContext) {
-    const ctx = canvas.getContext('2d');
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
-
-    const nodes = Array.from({ length: 36 }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.35,
-      vy: (Math.random() - 0.5) * 0.35,
-      r: Math.random() * 1.8 + 0.8
-    }));
-
-    window.addEventListener('resize', () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    });
-
-    function draw() {
-      ctx.clearRect(0, 0, width, height);
-      for (let i = 0; i < nodes.length; i++) {
-        const a = nodes[i];
-        a.x += a.vx;
-        a.y += a.vy;
-        if (a.x < 0 || a.x > width) a.vx *= -1;
-        if (a.y < 0 || a.y > height) a.vy *= -1;
-
-        ctx.beginPath();
-        ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 240, 255, 0.45)';
-        ctx.fill();
-
-        for (let j = i + 1; j < nodes.length; j++) {
-          const b = nodes[j];
-          const dx = a.x - b.x;
-          const dy = a.y - b.y;
-          const dist = Math.hypot(dx, dy);
-          if (dist < 140) {
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = `rgba(0, 240, 255, ${(1 - dist / 140) * 0.12})`;
-            ctx.stroke();
-          }
-        }
-      }
-      requestAnimationFrame(draw);
-    }
-    draw();
-  }
 })();
