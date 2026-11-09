@@ -210,16 +210,12 @@ adversarial_gates:
     });
   });
 
-  // 10. KEYBOARD SHORTCUTS (1-6 DESIGN SWITCH · C COPY EMAIL · / JUMP TO STACK)
-  const DS_ORDER = ['linear', 'claude', 'cursor', 'vercel', 'raycast', 'stripe'];
+  // 10. KEYBOARD SHORTCUTS (C COPY EMAIL · / JUMP TO STACK)
   window.addEventListener('keydown', (e) => {
     const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
     if (tag === 'input' || tag === 'textarea' || e.metaKey || e.ctrlKey || e.altKey) return;
 
-    if (e.key >= '1' && e.key <= '6') {
-      const idx = parseInt(e.key, 10) - 1;
-      if (DS_ORDER[idx]) setDesignSystem(DS_ORDER[idx]);
-    } else if (e.key === 'c' || e.key === 'C') {
+    if (e.key === 'c' || e.key === 'C') {
       const emailBtn = document.getElementById('copy-email-btn');
       if (emailBtn) emailBtn.click();
     } else if (e.key === '/') {
