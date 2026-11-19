@@ -13,6 +13,7 @@ Key verified production outcomes:
 
 - [Full Markdown Portfolio Dossier](https://4r9un.github.io/index.md): Complete structured Markdown version of https://4r9un.github.io/ with tables, career history, architecture, and FAQ
 - [Expanded LLM Context Dossier](https://4r9un.github.io/llms-full.txt): Self-contained plain-text Markdown profile for AI search engines, recruiters, and autonomous research agents
+- [Structured JSON Resume (v1.0.0)](https://4r9un.github.io/resume.json): Standardized machine-readable JSON Resume for AI talent intelligence & recruiter agents
 - [Executive CV PDF (2026)](https://4r9un.github.io/assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf): Official two-page executive resume PDF
 
 ## Flagship Open-Source AI Security & MCP Systems

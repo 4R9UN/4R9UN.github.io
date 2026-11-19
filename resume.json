@@ -1,0 +1,254 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Arjun Trivedi",
+    "label": "Senior Security Researcher | Detection Engineering & AI Security",
+    "image": "https://4r9un.github.io/assets/arjun-avatar.jpg",
+    "email": "arjuntrivedi42@yahoo.com",
+    "url": "https://4r9un.github.io/",
+    "summary": "Senior Security Researcher at Microsoft (7+ years at Microsoft, 12+ years in Cybersecurity) experienced in leading and managing global multidisciplinary detection engineering, security research, and SecOps teams, mentoring 50+ security engineers, and shipping AI-for-Security platforms end to end from early R&D prototypes into generally available enterprise products across 1,000+ organizations and 100M+ endpoints. Creator of Official Model Context Protocol (MCP) Registry servers (mcp-kql-server, fastmcp-threatintel), ASRS multi-SIEM autonomous SOC platform, and Assured-Arc dual-host agent harness.",
+    "location": {
+      "city": "Hyderabad",
+      "countryCode": "IN",
+      "region": "Telangana"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "imarjuntrivedi",
+        "url": "https://www.linkedin.com/in/imarjuntrivedi/"
+      },
+      {
+        "network": "GitHub",
+        "username": "4R9UN",
+        "url": "https://github.com/4R9UN"
+      },
+      {
+        "network": "PyPI",
+        "username": "Arjun_Trivedi",
+        "url": "https://pypi.org/user/Arjun_Trivedi/"
+      },
+      {
+        "network": "Substack",
+        "username": "arjuntrivedi",
+        "url": "https://arjuntrivedi.substack.com"
+      },
+      {
+        "network": "Microsoft Tech Community",
+        "username": "arjun_trivedi",
+        "url": "https://techcommunity.microsoft.com/users/arjun_trivedi/1208210"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Microsoft",
+      "position": "Senior Security Researcher | Detection Engineering & AI Security",
+      "url": "https://www.microsoft.com",
+      "startDate": "2020-08",
+      "summary": "Leads and manages global multidisciplinary detection engineering, security research, and SecOps initiatives, owning technical strategy, hiring, mentorship (50+ engineers), and end-to-end R&D-to-GA product delivery across Microsoft Defender, Microsoft Sentinel, and Microsoft Security Copilot.",
+      "highlights": [
+        "Shipped production RAG threat-summarization grounding in Microsoft Security Copilot (+35% analyst accuracy lift).",
+        "Contributed research and threat-hunting agent capabilities to Microsoft Project Perception inside Microsoft Defender.",
+        "Co-created Multi-Cloud Attack Coverage Essentials for Microsoft Sentinel adopted by 1,000+ global enterprise environments across Azure, AWS, GCP, Okta, IBM, and Oracle.",
+        "Authored 200+ production KQL detections (-50% incident MTTR) and built ensemble ML anomaly models (-30% false positives).",
+        "Partnered directly with enterprise CISO and SOC teams on 50+ field escalations (+20% CSAT) and built 20+ MSTICPy, Python, and YARA tools (-60% manual hunting effort)."
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "position": "Cyber Threat Hunter | Microsoft Threat Experts",
+      "url": "https://www.microsoft.com",
+      "startDate": "2019-03",
+      "endDate": "2020-08",
+      "summary": "Founding cohort member of Microsoft Threat Experts managed hunting service; served as Tier-1 hunting unit Subject Matter Expert lead.",
+      "highlights": [
+        "Operationalized human-operated adversary hunting workflows, ML IOC pipelines, and reverse-engineering quality governance."
+      ]
+    },
+    {
+      "name": "Wipro",
+      "position": "Malware Analyst",
+      "startDate": "2017-06",
+      "endDate": "2019-02",
+      "summary": "Reverse-engineered Android APKs, Dalvik bytecode, and native ARM/x86 libraries using IDA Pro and Ghidra and built isolated behavioral detonation sandboxes."
+    },
+    {
+      "name": "Sophos",
+      "position": "Threat Researcher",
+      "startDate": "2014-09",
+      "endDate": "2017-05",
+      "summary": "Dissected banking trojans, ransomware, botnets, and custom packers; shipped behavioral detections protecting 100M+ users across 150 countries."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Amity University",
+      "area": "Information Technology",
+      "studyType": "Master of Science (M.Sc.)",
+      "startDate": "2015",
+      "endDate": "2017"
+    },
+    {
+      "institution": "Maharaja Krishnakumarsinhji Bhavnagar University",
+      "area": "Computer Science / Information Technology",
+      "studyType": "Bachelor of Science (B.Sc.)",
+      "startDate": "2013",
+      "endDate": "2015"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Winner, Microsoft Global Hackathon 2023 (MSTICPy AI Assistant) & Hackathon Judge",
+      "date": "2023-09",
+      "awarder": "Microsoft"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "SANS FOR578: Cyber Threat Intelligence",
+      "issuer": "SANS Institute"
+    },
+    {
+      "name": "Microsoft SkillUp AI: Applied AI & Responsible AI Development",
+      "issuer": "Microsoft"
+    },
+    {
+      "name": "Cyber Security & Ethical Hacking",
+      "issuer": "Appin Technologies"
+    }
+  ],
+  "publications": [
+    {
+      "name": "AZ Security Podcast Episode 27: Schema-Grounded NL2KQL & AI SOC Automation",
+      "publisher": "AZ Security Podcast",
+      "url": "https://youtu.be/T0213_VfW7U"
+    },
+    {
+      "name": "MCP KQL Server & Agentic Cybersecurity Newsletter (1,971+ Subscribers)",
+      "publisher": "Substack",
+      "url": "https://arjuntrivedi.substack.com"
+    }
+  ],
+  "projects": [
+    {
+      "name": "mcp-kql-server",
+      "description": "Official MCP Registry & MseeP-verified Python MCP server (PyPI v2.1.5) for schema-grounded NL2KQL across Microsoft Sentinel and Azure Data Explorer with semantic schema memory and Azure Container Apps Bicep IaC.",
+      "url": "https://github.com/4R9UN/mcp-kql-server",
+      "keywords": [
+        "MCP",
+        "KQL",
+        "Microsoft Sentinel",
+        "Azure Data Explorer",
+        "Python",
+        "NL2KQL"
+      ]
+    },
+    {
+      "name": "fastmcp-threatintel",
+      "description": "Multi-source Cyber Threat Intelligence MCP server (PyPI v0.2.7, 40+ stars) integrating VirusTotal, AlienVault OTX, AbuseIPDB, and IPinfo with MITRE ATT&CK mapping and STIX 2.1 export.",
+      "url": "https://github.com/4R9UN/fastmcp-threatintel",
+      "keywords": [
+        "MCP",
+        "FastMCP",
+        "Threat Intelligence",
+        "STIX 2.1",
+        "MITRE ATT&CK",
+        "Python"
+      ]
+    },
+    {
+      "name": "ASRS (Autonomous Security Reasoning System)",
+      "description": "Multi-SIEM autonomous investigation platform orchestrating Triage, Deep Analysis, and Verdict agents across Microsoft Sentinel, Splunk, Elastic, and CrowdStrike.",
+      "url": "https://asrs-demo-v1.vercel.app/",
+      "keywords": [
+        "Autonomous SOC",
+        "Multi-Agent Systems",
+        "TypeScript",
+        "SIEM"
+      ]
+    },
+    {
+      "name": "Assured-Arc",
+      "description": "Portable dual-host AI engineering workbench across VS Code, GitHub Copilot CLI, and Claude Code with CapScope per-worker capability ceilings, 29 lazy-loaded skills, MCP tool-poisoning guards, and nonce-verified scoreboards.",
+      "url": "https://github.com/4R9UN/Assured-Arc",
+      "keywords": [
+        "Agent Harness",
+        "AI Safety",
+        "Prompt Injection Defense",
+        "Claude Code",
+        "GitHub Copilot"
+      ]
+    },
+    {
+      "name": "Multi-Cloud-Notebooks",
+      "description": "Cross-cloud detection engineering and hunting notebooks across Azure, AWS, GCP, and Okta powering 1,000+ Microsoft Sentinel enterprise deployments.",
+      "url": "https://github.com/4R9UN/Multi-Cloud-Notebooks",
+      "keywords": [
+        "Multi-Cloud Security",
+        "Microsoft Sentinel",
+        "Jupyter",
+        "KQL",
+        "MSTICPy"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Agentic AI & AI Security",
+      "level": "Principal",
+      "keywords": [
+        "Agentic AI",
+        "Multi-Agent Systems",
+        "Model Context Protocol (MCP)",
+        "FastMCP",
+        "RAG",
+        "CAG",
+        "NL2KQL",
+        "LangGraph",
+        "AI Red Teaming",
+        "Prompt Injection Defense",
+        "OWASP LLM Top 10"
+      ]
+    },
+    {
+      "name": "Detection Engineering & Threat Research",
+      "level": "Principal",
+      "keywords": [
+        "KQL",
+        "Detection-as-Code",
+        "Microsoft Sentinel",
+        "Microsoft Defender XDR",
+        "Microsoft Security Copilot",
+        "MITRE ATT&CK",
+        "AiTM Phishing Detection",
+        "UEBA",
+        "SANS FOR578 CTI",
+        "IDA Pro",
+        "Ghidra",
+        "YARA",
+        "STIX 2.1"
+      ]
+    },
+    {
+      "name": "Multi-Cloud, Applied ML & Leadership",
+      "level": "Principal",
+      "keywords": [
+        "Azure",
+        "AWS",
+        "GCP",
+        "Okta",
+        "Splunk",
+        "Elastic Security",
+        "CrowdStrike",
+        "Python",
+        "TypeScript",
+        "PowerShell",
+        "scikit-learn",
+        "Team Management",
+        "R&D-to-GA Product Delivery",
+        "AI Forward Deployed Engineering"
+      ]
+    }
+  ]
+}
