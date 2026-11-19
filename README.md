@@ -1,6 +1,6 @@
 # 🌐 Arjun Trivedi (`@4R9UN`) | AI Security, Agentic Architecture & Detection Engineering Portfolio
 
-**Live URL:** [https://4r9un.github.io](https://4r9un.github.io)
+**Live URL:** [https://4r9un.github.io/](https://4r9un.github.io/) · **Agent Index (`llms.txt`):** [https://4r9un.github.io/llms.txt](https://4r9un.github.io/llms.txt) · **Markdown Dossier:** [https://4r9un.github.io/index.md](https://4r9un.github.io/index.md)
 
 <p align="center">
   <img src="./assets/og-card.png" alt="Arjun Trivedi AI Security & Agentic Systems Portfolio Banner" width="100%" />
@@ -17,17 +17,22 @@ Zero-build-step **Executive AI Security & Agentic Architecture** portfolio for *
 - **Stage-Synced 4-Stage Pipeline & 60s Stack:** Clickable architecture schematic synced directly to runnable terminals for **`mcp-kql-server`** (Official MCP Registry), **`fastmcp-threatintel`** (PyPI + STIX 2.1), **[ASRS Live Demo](https://asrs-demo-v1.vercel.app/)**, and **`Assured-Arc`** (`29` lazy-loaded skills across VS Code, Copilot CLI, and Claude Code).
 - **Executive CV & Competency Matrix:** Direct download for `assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf` plus a 5-domain technical & leadership stack matrix.
 
-## 🗂️ Repository Structure
+## 🗂️ Repository Structure & AI / LLM Discovery Endpoints
 
 ```text
 4R9UN.github.io/
-├── index.html                                                # Cyber-Executive Command Center SPA
-├── styles.css                                                # Obsidian glassmorphic design system & animations
-├── app.js                                                    # Role-Lens switcher, pipeline inspector, modals & canvas telemetry
+├── index.html                                                # Executive Portfolio + @graph JSON-LD + Semantic Tables + Q&A
+├── index.md                                                  # Clean Markdown mirror (<link rel="alternate" type="text/markdown">)
+├── llms.txt                                                  # llmstxt.org v2 Agent Index (<link rel="describedby">)
+├── llms-full.txt                                             # Complete single-pass LLM & Recruiter Markdown dossier
+├── robots.txt                                                # Explicit Allow policy for OAI-SearchBot, ClaudeBot, PerplexityBot, Googlebot, Bingbot
+├── sitemap.xml                                               # XML Sitemap covering HTML, Markdown, llms.txt & Executive CV PDF
+├── styles.css                                                # Obsidian Dark & Editorial Light design system
+├── app.js                                                    # Cmd+K Command Palette, Attack Graph Lab, Role-Lens & Stage Switcher
 ├── assets/
 │   ├── Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf # Downloadable Executive CV
-│   ├── hero-command-center.svg                               # Executive banner SVG
-│   ├── agentic-security-workflow.svg                         # 4-stage Agentic Security workflow SVG
+│   ├── og-card.png                                           # 1200x630 OpenGraph / LinkedIn / X social preview card
+│   ├── arjun-avatar.jpg                                      # Executive portrait
 │   └── fde-execution-loop.svg                                # AI Forward Deployed Engineering flywheel SVG
 └── README.md
 ```

@@ -1452,3 +1452,69 @@ html[data-theme="light"] .cred-year {
     gap: 4px;
   }
 }
+
+/* ==========================================================================
+   GEO SEMANTIC SCORECARD TABLES & CRAWLABLE ARCHITECTURE DRAWER
+   ========================================================================== */
+.geo-crawlable-drawer {
+  padding: 16px 22px;
+}
+
+.geo-crawlable-drawer summary {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-bright);
+  list-style: revert;
+}
+
+html[data-theme="light"] .geo-crawlable-drawer summary {
+  color: var(--accent);
+}
+
+.geo-crawlable-drawer[open] summary {
+  margin-bottom: 14px;
+}
+
+.geo-table-wrap {
+  overflow-x: auto;
+}
+
+.geo-scorecard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.geo-scorecard-table th {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.geo-scorecard-table td {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  vertical-align: top;
+}
+
+.geo-scorecard-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.geo-scorecard-table td strong {
+  color: var(--text-primary);
+}
+
+.geo-scorecard-table td a:hover {
+  color: var(--accent-bright);
+  text-decoration: underline;
+}

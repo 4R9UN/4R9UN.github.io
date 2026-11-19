@@ -1,0 +1,40 @@
+# Arjun Trivedi (@4R9UN)
+
+> Senior Security Researcher at Microsoft (7+ years at Microsoft, 12+ years in Cybersecurity) based in Hyderabad, India. Experienced in leading and managing global multidisciplinary detection engineering, security research, and SecOps teams and shipping AI-for-Security platforms end-to-end from ambiguous R&D prototypes to enterprise GA scale. Creator of Official Model Context Protocol (MCP) Registry servers (`mcp-kql-server`, `fastmcp-threatintel`), the multi-SIEM Autonomous Security Reasoning System (`ASRS`), and the `Assured-Arc` dual-host agent harness.
+
+Key verified production outcomes:
+- **Microsoft Security Copilot RAG Grounding**: +35% analyst threat-summarization accuracy lift (technical owner from prototype to production).
+- **Microsoft Project Perception**: Contributed research and threat-hunting agent capabilities inside Microsoft Defender applying organizational context and human-in-the-loop reasoning.
+- **Multi-Cloud Attack Coverage Essentials (Microsoft Sentinel)**: Co-created and shipped across 1,000+ global enterprise environments (Azure, AWS, GCP, Okta, IBM, Oracle).
+- **Detection Engineering & Applied ML at Scale**: Authored 200+ production KQL detections (-50% incident MTTR), trained production ML anomaly models (-30% false positives), and contributed 20+ Python/MSTICPy/YARA automations (-60% manual hunting effort).
+- **AI Forward Deployed Engineering & Leadership**: Resolved 50+ global enterprise CISO/SOC escalations (+20% CSAT), mentored 50+ security professionals, won the 2023 Microsoft Global Hackathon (MSTICPy AI Assistant), and holds SANS FOR578 (Cyber Threat Intelligence).
+
+## Machine-Readable Profile & Executive CV
+
+- [Full Markdown Portfolio Dossier](https://4r9un.github.io/index.md): Complete structured Markdown version of https://4r9un.github.io/ with tables, career history, architecture, and FAQ
+- [Expanded LLM Context Dossier](https://4r9un.github.io/llms-full.txt): Self-contained plain-text Markdown profile for AI search engines, recruiters, and autonomous research agents
+- [Executive CV PDF (2026)](https://4r9un.github.io/assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf): Official two-page executive resume PDF
+
+## Flagship Open-Source AI Security & MCP Systems
+
+- [mcp-kql-server (GitHub)](https://github.com/4R9UN/mcp-kql-server): Official MCP Registry & MseeP-verified Python MCP server (PyPI v2.1.5) for schema-grounded NL2KQL across Microsoft Sentinel and Azure Data Explorer with semantic schema memory and Azure Container Apps + Bicep IaC
+- [fastmcp-threatintel (GitHub)](https://github.com/4R9UN/fastmcp-threatintel): Multi-source Cyber Threat Intelligence MCP server (PyPI v0.2.7, 40+ stars) integrating VirusTotal, AlienVault OTX, AbuseIPDB, and IPinfo with MITRE ATT&CK mapping, STIX 2.1 export, and D3.js attribution graphs
+- [ASRS Live Multi-SIEM Demo](https://asrs-demo-v1.vercel.app/): Autonomous Security Reasoning System orchestrating Triage, Deep Analysis, and Verdict agents across Microsoft Sentinel, Splunk, Elastic, and CrowdStrike ([Source Repo](https://github.com/4R9UN/ASRS-demo))
+- [Assured-Arc (GitHub)](https://github.com/4R9UN/Assured-Arc): Portable, reversible AI engineering workbench across VS Code, GitHub Copilot CLI, and Claude Code with a shared dual-host contract, 29 lazy-loaded skills, compound-token routing, AgentShield checks, and nonce-verified scoreboards
+- [Multi-Cloud-Notebooks (GitHub)](https://github.com/4R9UN/Multi-Cloud-Notebooks): Cross-cloud detection and threat-hunting notebooks spanning Azure, AWS, GCP, Okta, IBM, and Oracle (1,000+ Sentinel enterprise deployments)
+- [Prompt-Book (GitHub)](https://github.com/4R9UN/Prompt-Book): Privacy-first, local-first workspace for organizing, testing, and red-teaming security LLM prompts
+
+## Verified External Profiles & Publications
+
+- [GitHub Profile (@4R9UN)](https://github.com/4R9UN): Open-source repositories, MCP servers, and security engineering tools
+- [LinkedIn Profile (Arjun Trivedi)](https://www.linkedin.com/in/imarjuntrivedi/): Career history, 8,950+ followers, and executive network
+- [PyPI Maintainer Profile](https://pypi.org/user/Arjun_Trivedi/): Published Python packages (`mcp-kql-server`, `fastmcp-threatintel`)
+- [Substack Newsletter (MCP KQL Server)](https://arjuntrivedi.substack.com): 1,971+ subscribers covering AI agents in cybersecurity and detection engineering
+- [AZ Security Podcast Episode 27](https://youtu.be/T0213_VfW7U): Featured guest interview on schema-grounded NL2KQL and AI-enabled SOC automation
+- [Microsoft Tech Community Author Profile](https://techcommunity.microsoft.com/users/arjun_trivedi/1208210): Multi-cloud detection engineering and Microsoft Sentinel publications
+
+## Optional
+
+- [KqlNexus (GitHub)](https://github.com/4R9UN/KqlNexus): Reusable KQL detection and hunting query library
+- [JupyterUniverse (GitHub)](https://github.com/4R9UN/JupyterUniverse): Search index for offensive and defensive InfoSec Jupyter notebooks
+- [Personal Security Blog](https://arjun-trivedi.blogspot.com): 15+ technical articles (10K+ readers) on malware analysis, threat hunting, and AI security
