@@ -1,24 +1,21 @@
-# 🌐 Arjun Trivedi (`@4R9UN`) — Executive AI Security, Agentic Architecture & AI FDE Portfolio
+# 🌐 Arjun Trivedi (`@4R9UN`) | AI Security, Agentic Architecture & Detection Engineering Portfolio
 
 **Live URL:** [https://4r9un.github.io](https://4r9un.github.io)
 
 <p align="center">
-  <img src="./assets/hero-command-center.svg" alt="Arjun Trivedi Executive Command Center Banner" width="100%" />
+  <img src="./assets/og-card.png" alt="Arjun Trivedi AI Security & Agentic Systems Portfolio Banner" width="100%" />
 </p>
 
 ## ⚡ Overview
 
-Zero-build-step, high-performance **Cyber-Executive Command Center** portfolio website for **Arjun Trivedi (`@4R9UN`)** — Senior Security Research Leader at Microsoft (12+ years in Cybersecurity, 7+ years at Microsoft, leading global Security Research & Applied Science teams across Agentic AI, Detection Engineering, and AI Forward Deployed Engineering).
+Zero-build-step **Executive AI Security & Agentic Architecture** portfolio for **Arjun Trivedi (`@4R9UN`)**, Senior Security Researcher at Microsoft (12+ years in Cybersecurity, 7+ years at Microsoft, experienced in leading and managing global multidisciplinary detection engineering and security research teams and shipping products end-to-end from research prototype to enterprise scale).
 
 ### Key Interactive Features
-- **Recruiter Role-Lens Switcher:** Dynamically filters and spotlights accomplishments across four executive lenses:
-  - *All Executive Capabilities*
-  - *AI Security & Agentic Architect*
-  - *AI Forward Deployed Engineering (FDE) Leader*
-  - *Director / Head of Detection & Threat Research*
-- **Interactive 4-Stage Agentic Security Pipeline:** Clickable architecture inspector covering *Telemetry & CTI Ingestion*, *MCP Context & Grounding*, *Multi-Agent Reasoning & AI Red Teaming*, and *Enterprise Production Impact*.
-- **Flagship Production Systems Showcase:** Filterable cards + architecture specification modals for **ASRS** ([Live Demo](https://asrs-demo-v1.vercel.app/)), **`mcp-kql-server`** (PyPI v2.1.5, Official MCP Registry), **`fastmcp-threatintel`** (PyPI v0.2.7, MseeP Verified), **`Assured-Arc`**, **Multi Cloud Attack Coverage Essentials** (`1,000+` enterprises), and **PromptBook**.
-- **Executive CV Download:** Includes direct download for `assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf`.
+- **`⌘K` / `Ctrl+K` Executive Command Palette:** Keyboard-navigable action launcher to jump across sections, launch live sandboxes, copy PyPI/PowerShell commands, open LinkedIn/GitHub, or switch between **Obsidian Dark** and **Editorial Light** themes.
+- **Interactive Cross-Plane Attack Graph Lab:** Compare *Siloed Point Alerts* vs. *Multi-Agent Cross-Plane Attack Graph + Independent Evidence & Critic Gates* across 6 clickable MITRE ATT&CK and OWASP LLM nodes.
+- **4-Lens Mandate Switcher:** Dynamically spotlights capabilities across *All Capabilities*, *Principal / Head of AI Security*, *AI Forward Deployed Engineering (FDE)*, and *Director of Detection & Research*.
+- **Stage-Synced 4-Stage Pipeline & 60s Stack:** Clickable architecture schematic synced directly to runnable terminals for **`mcp-kql-server`** (Official MCP Registry), **`fastmcp-threatintel`** (PyPI + STIX 2.1), **[ASRS Live Demo](https://asrs-demo-v1.vercel.app/)**, and **`Assured-Arc`** (`29` lazy-loaded skills across VS Code, Copilot CLI, and Claude Code).
+- **Executive CV & Competency Matrix:** Direct download for `assets/Arjun_Trivedi_Executive_AI_Security_Leader_CV_2026.pdf` plus a 5-domain technical & leadership stack matrix.
 
 ## 🗂️ Repository Structure
 

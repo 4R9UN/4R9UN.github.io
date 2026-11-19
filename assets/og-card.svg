@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="55%" stop-color="#0b1326"/>
+      <stop offset="100%" stop-color="#070b14"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="28" y="28" width="1144" height="574" rx="24" fill="none" stroke="url(#acc)" stroke-width="2.5"/>
+
+  <g transform="translate(72, 74)">
+    <rect width="410" height="34" rx="8" fill="#0f1b36" stroke="#38bdf8" stroke-opacity="0.5"/>
+    <text x="18" y="22" fill="#38bdf8" font-family="Consolas, monospace" font-size="14" font-weight="700">MICROSOFT // AI SECURITY &amp; AGENTIC SYSTEMS</text>
+
+    <text x="0" y="96" fill="#f8fafc" font-family="Segoe UI, Inter, sans-serif" font-size="54" font-weight="800">Arjun Trivedi (@4R9UN)</text>
+    <text x="0" y="144" fill="#34d399" font-family="Segoe UI, Inter, sans-serif" font-size="27" font-weight="700">Senior Security Researcher · AI Security &amp; Agentic Systems</text>
+    <text x="0" y="192" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="21">12+ Yrs Cybersecurity · 7+ Yrs Microsoft · Team Leadership &amp; End-to-End R&amp;D to Production</text>
+    <text x="0" y="224" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="21">Official MCP Registry Pioneer (mcp-kql-server · fastmcp-threatintel) · ASRS · Assured-Arc</text>
+
+    <g transform="translate(0, 276)">
+      <rect x="0" y="0" width="250" height="108" rx="14" fill="#0d1528" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="22" y="46" fill="#10b981" font-family="Consolas, monospace" font-size="34" font-weight="800">+35%</text>
+      <text x="22" y="78" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="16">Security Copilot RAG Lift</text>
+
+      <rect x="272" y="0" width="250" height="108" rx="14" fill="#0d1528" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="294" y="46" fill="#38bdf8" font-family="Consolas, monospace" font-size="34" font-weight="800">1,000+</text>
+      <text x="294" y="78" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="16">Enterprise Deployments</text>
+
+      <rect x="544" y="0" width="250" height="108" rx="14" fill="#0d1528" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="566" y="46" fill="#a5b4fc" font-family="Consolas, monospace" font-size="34" font-weight="800">-50% MTTR</text>
+      <text x="566" y="78" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="16">200+ Production Detections</text>
+
+      <rect x="816" y="0" width="240" height="108" rx="14" fill="#0d1528" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="838" y="46" fill="#fbbf24" font-family="Consolas, monospace" font-size="34" font-weight="800">100M+</text>
+      <text x="838" y="78" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="16">Users Protected</text>
+    </g>
+
+    <text x="0" y="446" fill="#64748b" font-family="Consolas, monospace" font-size="17">https://4r9un.github.io  ·  github.com/4R9UN  ·  linkedin.com/in/imarjuntrivedi</text>
+  </g>
+</svg>
